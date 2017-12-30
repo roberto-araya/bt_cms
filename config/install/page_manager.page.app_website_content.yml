@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+id: app_website_content
+label: Content
+description: 'Page with lists of content collections.'
+use_admin_theme: true
+path: /app/website/content
+access_logic: and
+access_conditions:
+  -
+    id: user_role
+    roles:
+      bt_create_content: bt_create_content
+      bt_edit_publish_content: bt_edit_publish_content
+    negate: false
+    context_mapping:
+      user: current_user
+parameters: {  }

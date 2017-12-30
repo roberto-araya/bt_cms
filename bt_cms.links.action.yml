@@ -1,0 +1,12 @@
+bt_add_block_action:
+  route_name: bt_add_block
+  title: 'Add block'
+  appears_on:
+    - page_manager.page_view_app_website_blocks_app_website_blocks-panels_variant-0
+  class: \Drupal\block_content\Plugin\Menu\LocalAction\BlockContentAddLocalAction
+
+bt_create_ipe_page_action:
+  route_name: bt_create_ipe_page
+  title: 'Create page'
+  appears_on:
+    - bt_page_drag_and_drop

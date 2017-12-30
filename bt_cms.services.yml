@@ -1,0 +1,15 @@
+services:
+  bt_cms.route_subscriber:
+    class: Drupal\bt_cms\Routing\RouteSubscriber
+    tags:
+      - { name: event_subscriber }
+  bt_cms.breadcrumbs:
+    class: Drupal\bt_cms\Breadcrumb\BreadcrumbBuilder
+    arguments: ['@current_user']
+    tags:
+      - { name: breadcrumb_builder, priority: 1010 }
+#  bt_cms_config.overrider:
+#    class: Drupal\bt_cms\Config\ConfigCMSOverride
+#    arguments: ['@config.storage', '@event_dispatcher', '@config.typed']
+#    tags:
+#      - {name: config.factory.override, priority: 25}

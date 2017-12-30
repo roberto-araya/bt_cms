@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+id: bt_build_block_pages
+label: 'Build pages with blocks'
+weight: 21
+is_admin: null
+permissions: {  }

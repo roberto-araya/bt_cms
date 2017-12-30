@@ -1,0 +1,12 @@
+langcode: en
+status: true
+dependencies: {  }
+id: bt_delete_content
+label: 'Delete content'
+weight: 20
+is_admin: null
+permissions:
+  - 'access media overview'
+  - 'delete any media'
+  - 'access content overview'
+  - 'delete all revisions'

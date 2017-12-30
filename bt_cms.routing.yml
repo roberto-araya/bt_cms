@@ -1,0 +1,61 @@
+bt_add_block:
+  path: '/app/website/blocks/add'
+  defaults:
+    _controller: '\Drupal\block_content\Controller\BlockContentController::add'
+    _title: 'Add custom block'
+  options:
+    _admin_route: TRUE
+  requirements:
+    _permission: 'administer blocks'
+
+# Ruta administrativa que muestra una lista de páginas creadas con page_manager
+bt_page_drag_and_drop:
+  path: '/app/website/pages'
+  defaults:
+    _controller: '\Drupal\bt_cms\Controller\UserIpePageList::build'
+    _title: 'Pages drag and drop'
+  options:
+    _admin_route: TRUE
+  requirements:
+    _permission: 'administer pages'
+
+# Ruta de formulario simplificado para crear una entity page
+bt_create_ipe_page:
+  path: '/app/website/pages/add'
+  defaults:
+    _form: '\Drupal\bt_cms\Form\AddPageDragAndDrop'
+    _title: 'Add page'
+  options:
+    _admin_route: TRUE
+  requirements:
+    _permission: 'administer pages'
+
+# Ruta de formulario simplificado para editar una entity page.
+bt_edit_ipe_page:
+  path: '/app/website/page/{page}/edit'
+  defaults:
+    _form: '\Drupal\bt_cms\Form\EditPageDragAndDrop'
+    _title: 'Edit page drag and drop'
+  options:
+    _admin_route: TRUE
+  requirements:
+    _permission: 'administer pages'
+
+# Ruta de formulario simplificado para eliminar una entity page
+bt_delete_ipe_page:
+  path: '/app/website/page/{page}/delete'
+  defaults:
+    _form: '\Drupal\bt_cms\Form\DeletePageDragAndDrop'
+    _title: 'Delete drag and drop'
+  options:
+    _admin_route: TRUE
+  requirements:
+    _permission: 'administer pages'
+
+# Ruta para activar o desactivar una entity page
+bt_enable_disable_ipe_page:
+  path: '/app/website/page/{page}/{op}'
+  defaults:
+    _controller: '\Drupal\bt_cms\Controller\CustomPageManagerController::PageOperation'
+  requirements:
+    _permission: 'administer pages'

@@ -1,0 +1,6 @@
+langcode: en
+status: true
+dependencies: {  }
+id: bt_homepage_promoted
+label: 'Promote to home page'
+description: 'Promote content to the site''s home page content list.'

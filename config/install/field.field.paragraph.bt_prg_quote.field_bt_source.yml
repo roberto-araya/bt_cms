@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_bt_source
+    - paragraphs.paragraphs_type.bt_prg_quote
+id: paragraph.bt_prg_quote.field_bt_source
+field_name: field_bt_source
+entity_type: paragraph
+bundle: bt_prg_quote
+label: Source
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

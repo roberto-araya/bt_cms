@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies: {  }
+id: bt_edit_publish_content
+label: 'Edit and publish content'
+weight: 19
+is_admin: null
+permissions:
+  - 'access media overview'
+  - 'update any media'
+  - 'access content overview'
+  - 'revert all revisions'
+  - 'view all revisions'
+  - 'view any unpublished content'
+  - 'view latest version'
+  - 'use published_draft transition'
+  - 'use archived_published transition'
+  - 'use published_published transition'
+  - 'use needs_review_published transition'
+  - 'use draft_published transition'

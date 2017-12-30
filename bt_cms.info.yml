@@ -1,0 +1,31 @@
+name: Btester CMS
+description: ''
+type: module
+core: 8.x
+dependencies:
+  - radix_layouts
+  - paragraphs
+  - forum
+  - bt_core
+  - image
+  - field
+  - field_group
+  - field_states_ui
+  - language
+  - menu_ui
+  - node
+  - path
+  - rdf
+  - text
+  - user
+  - content_moderation
+  - media_entity
+  - maxlength
+  - slick_media
+  - inline_entity_form
+  - field_states_ui
+  - media_entity_image
+  - media_pinkeye
+  - entity_forms_in_blocks
+version: 8.x-1.0
+package: Btester

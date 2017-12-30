@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies: {  }
+id: bt_admin_blocks
+label: 'Create and admin blocks'
+weight: 5
+is_admin: null
+permissions:
+  - 'administer blocks'
+  - 'use draft_draft transition'
+  - 'use needs_review_needs_review transition'
+  - 'use draft_needs_review transition'
+  - 'use needs_review_draft transition'
+  - 'view moderation states'

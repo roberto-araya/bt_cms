@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies: {  }
+id: bt_delete_own_content
+label: 'Delete own content'
+weight: 15
+is_admin: null
+permissions:
+  - 'delete media'

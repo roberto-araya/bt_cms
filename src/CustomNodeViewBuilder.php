@@ -1,0 +1,50 @@
+<?php
+
+namespace Drupal\bt_cms;
+
+use Drupal\node\NodeViewBuilder;
+use Drupal\node\NodeInterface;
+
+/**
+ * View builder handler for nodes.
+ */
+class CustomNodeViewBuilder extends NodeViewBuilder {
+
+  /**
+   * Build the default links (Read more) for a node.
+   *
+   * @param \Drupal\node\NodeInterface $entity
+   *   The node object.
+   * @param string $view_mode
+   *   A view mode identifier.
+   *
+   * @return array
+   *   An array that can be processed by drupal_pre_render_links().
+   */
+  protected static function buildLinks(NodeInterface $entity, $view_mode) {
+    $links = array();
+
+    // Always display a read more link on teasers because we have no way
+    // to know when a teaser view is different than a full view.
+    if (in_array($view_mode,['teaser','bt_box','bt_card','bt_credential','bt_index','bt_miniature','bt_poster','bt_teaser_image'])) {
+      $node_title_stripped = strip_tags($entity->label());
+      $links['node-readmore'] = array(
+        'title' => t('Read more<span class="visually-hidden"> about @title</span>', array(
+          '@title' => $node_title_stripped,
+        )),
+        'url' => $entity->urlInfo(),
+        'language' => $entity->language(),
+        'attributes' => array(
+          'rel' => 'tag',
+          'title' => $node_title_stripped,
+        ),
+      );
+    }
+
+    return array(
+      '#theme' => 'links__node__node',
+      '#links' => $links,
+      '#attributes' => array('class' => array('links', 'inline')),
+    );
+  }
+}

@@ -1,0 +1,6 @@
+langcode: en
+status: true
+dependencies: {  }
+id: bt_highlighted
+label: Highlighted
+description: 'Add content to the highlighted content lists.'

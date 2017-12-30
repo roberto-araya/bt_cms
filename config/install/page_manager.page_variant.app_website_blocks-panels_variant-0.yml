@@ -1,0 +1,40 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.app_website_blocks
+    - views.view.bt_admin_blocks
+  module:
+    - panels
+    - views
+id: app_website_blocks-panels_variant-0
+label: Default
+variant: panels_variant
+variant_settings:
+  blocks:
+    59fd437b-b793-48d4-8e5f-91d9b90b5d72:
+      id: 'views_block:bt_admin_blocks-blocks_list'
+      label: ''
+      provider: views
+      label_display: '0'
+      views_label: ''
+      items_per_page: none
+      region: contentmain
+      weight: 0
+      uuid: 59fd437b-b793-48d4-8e5f-91d9b90b5d72
+      context_mapping: {  }
+  id: panels_variant
+  uuid: a7f53c8d-7f1a-4377-919a-7b8d12866bac
+  label: null
+  weight: 0
+  layout: radix_boxton
+  layout_settings: {  }
+  page_title: Blocks
+  storage_type: page_manager
+  storage_id: app_website_blocks-panels_variant-0
+  builder: ipe
+page: app_website_blocks
+weight: 0
+selection_criteria: {  }
+selection_logic: and
+static_context: {  }

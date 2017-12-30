@@ -1,0 +1,23 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.bt_prg_table.field_bt_table
+    - paragraphs.paragraphs_type.bt_prg_table
+  module:
+    - tablefield
+    - workbench_moderation
+id: paragraph.bt_prg_table.default
+targetEntityType: paragraph
+bundle: bt_prg_table
+mode: default
+content:
+  field_bt_table:
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    type: tablefield
+hidden:
+  created: true
+  status: true
+  uid: true

@@ -1,0 +1,24 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+id: app_website
+label: 'Website'
+description: 'Administrative panel of Website section.'
+use_admin_theme: true
+path: /app/website
+access_logic: and
+access_conditions:
+  -
+    id: user_role
+    roles:
+      bt_add_forum_discussion: bt_add_forum_discussion
+      bt_moderate_comments: bt_moderate_comments
+      bt_create_content: bt_create_content
+      bt_edit_publish_content: bt_edit_publish_content
+      bt_build_block_pages: bt_build_block_pages
+    negate: false
+    context_mapping:
+      user: current_user
+parameters: {  }

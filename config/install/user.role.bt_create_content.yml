@@ -1,0 +1,28 @@
+langcode: en
+status: true
+dependencies: {  }
+id: bt_create_content
+label: 'Create content'
+weight: 18
+is_admin: null
+permissions:
+  - 'hide format selection for node'
+  - 'hide format selection for field_collection_item'
+  - 'hide format selection for media'
+  - 'hide format selection for taxonomy_term'
+  - 'can set node publish state to bt_highlighted'
+  - 'can set node publish state to bt_fixed'
+  - 'can set node publish state to bt_homepage_promoted'
+  - 'access media overview'
+  - 'create media'
+  - 'update media'
+  - 'access content overview'
+  - 'view own unpublished content'
+  - 'administer polls'
+  - 'import tablefield'
+  - 'view moderation states'
+  - 'use draft_draft transition'
+  - 'use needs_review_needs_review transition'
+  - 'use draft_needs_review transition'
+  - 'use needs_review_draft transition'
+  - 'view my_company in toolbar'

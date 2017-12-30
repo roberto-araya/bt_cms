@@ -1,0 +1,48 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.app_website_content
+    - views.view.bt_full_admin_content
+  module:
+    - panels
+    - user
+    - views
+id: app_website_content-panels_variant-0
+label: 'Full Content Dashboard'
+variant: panels_variant
+variant_settings:
+  blocks:
+    21025762-2198-469e-8fc8-3189d7eba284:
+      id: 'views_block:bt_full_admin_content-content_admin_list'
+      label: ''
+      provider: views
+      label_display: '0'
+      views_label: ''
+      items_per_page: none
+      region: contentmain
+      weight: 0
+      uuid: 21025762-2198-469e-8fc8-3189d7eba284
+      context_mapping: {  }
+  id: panels_variant
+  uuid: 02dfe13f-307b-49fb-881a-df8a3cc6cf46
+  label: null
+  weight: 0
+  layout: radix_boxton
+  layout_settings: {  }
+  page_title: Content
+  storage_type: page_manager
+  storage_id: app_website_content-panels_variant-0
+  builder: ipe
+page: app_website_content
+weight: -10
+selection_criteria:
+  -
+    id: user_role
+    roles:
+      bt_edit_publish_content: bt_edit_publish_content
+    negate: false
+    context_mapping:
+      user: current_user
+selection_logic: and
+static_context: {  }

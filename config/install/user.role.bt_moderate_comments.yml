@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies: {  }
+id: bt_moderate_comments
+label: 'Moderate comments'
+weight: 10
+is_admin: null
+permissions:
+  - 'administer comments'
+  - 'skip comment approval'

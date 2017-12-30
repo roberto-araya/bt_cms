@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+id: bt_content_editor_publisher
+label: 'Content editor and publisher'
+roles:
+  bt_create_content: bt_create_content
+  bt_edit_publish_content: bt_edit_publish_content

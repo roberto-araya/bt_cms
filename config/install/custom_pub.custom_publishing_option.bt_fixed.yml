@@ -1,0 +1,6 @@
+langcode: en
+status: true
+dependencies: {  }
+id: bt_fixed
+label: 'Fixed at the begining of content lists'
+description: 'Fix the content at the begin in the content lists'

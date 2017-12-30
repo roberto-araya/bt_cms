@@ -1,0 +1,11 @@
+langcode: en
+status: true
+dependencies: {  }
+id: bt_content_creator
+label: 'Content creator'
+roles:
+  bt_create_content: bt_create_content
+  bt_add_forum_discussion: bt_add_forum_discussion
+  bt_delete_own_content: bt_delete_own_content
+  bt_use_full_redaction_format: bt_use_full_redaction_format
+  bt_use_simple_redaction_format: bt_use_simple_redaction_format

@@ -1,0 +1,55 @@
+bt_website_task:
+  title: 'Website'
+  route_name: page_manager.page_view_app_website_app_website-panels_variant-0
+  base_route: page_manager.page_view_app_website_app_website-panels_variant-0
+  weight: -1
+
+bt_website_panel_task:
+  title: 'Panel'
+  route_name: page_manager.page_view_app_website_app_website-panels_variant-0
+  parent_id: bt_website_task
+  weight: -1
+
+bt_website_blocks_task:
+  title: 'Blocks'
+  route_name: page_manager.page_view_app_website_blocks_app_website_blocks-panels_variant-0
+  base_route: page_manager.page_view_app_website_app_website-panels_variant-0
+  weight: 1
+
+bt_website_pages_task:
+  title: 'Pages'
+  route_name: bt_page_drag_and_drop
+  base_route: page_manager.page_view_app_website_app_website-panels_variant-0
+  weight: 0
+
+bt_website_content_admin_task:
+  title: 'Content'
+  base_route: page_manager.page_view_app_website_app_website-panels_variant-0
+  weight: 2
+  route_name: page_manager.page_view_app_website_content_app_website_content-panels_variant-0
+#  deriver: 'Drupal\bt_cms\Plugin\Menu\LocalTask\ContentDeriverLocalTask'
+#  class: '\Drupal\bt_cms\Plugin\Menu\LocalTask\ContentLocalTask'
+
+bt_website_content_admin_default_task:
+  title: 'All Content'
+  route_name: page_manager.page_view_app_website_content_app_website_content-panels_variant-0
+  parent_id: bt_website_content_admin_task
+  weight: 2
+
+bt_website_content_writer_task:
+  title: 'Content'
+  route_name: page_manager.page_view_app_website_content_app_website_content-panels_variant-1
+  base_route: page_manager.page_view_app_website_app_website-panels_variant-0
+  weight: 2
+
+bt_website_content_writer_default_task:
+  title: 'All Content'
+  route_name: page_manager.page_view_app_website_content_app_website_content-panels_variant-1
+  parent_id: bt_website_content_writer_task
+  weight: 2
+
+bt_website_content_comments_task:
+  title: 'Comments'
+  route_name: page_manager.page_view_app_website_comments_app_website_comments-panels_variant-0
+  parent_id: bt_website_content_admin_task
+  weight: 2

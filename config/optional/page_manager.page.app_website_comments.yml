@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+id: app_website_comments
+label: Comments
+description: 'Page with the list of all comments left in the application.'
+use_admin_theme: true
+path: /app/website/comments
+access_logic: and
+access_conditions:
+  -
+    id: user_role
+    roles:
+      bt_moderate_comments: bt_moderate_comments
+    negate: false
+    context_mapping:
+      user: current_user
+parameters: {  }

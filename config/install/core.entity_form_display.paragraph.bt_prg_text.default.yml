@@ -1,0 +1,25 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.bt_prg_text.field_bt_paragraph
+    - paragraphs.paragraphs_type.bt_prg_text
+  module:
+    - text
+    - workbench_moderation
+id: paragraph.bt_prg_text.default
+targetEntityType: paragraph
+bundle: bt_prg_text
+mode: default
+content:
+  field_bt_paragraph:
+    weight: 6
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+hidden:
+  created: true
+  status: true
+  uid: true
