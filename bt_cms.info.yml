@@ -27,5 +27,4 @@ dependencies:
   - media_entity_image
   - media_pinkeye
   - entity_forms_in_blocks
-version: 8.x-1.0
 package: Btester
