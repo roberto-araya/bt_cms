@@ -3,28 +3,27 @@ description: ''
 type: module
 core: 8.x
 dependencies:
-  - radix_layouts
-  - paragraphs
-  - forum
-  - bt_core
-  - image
-  - field
-  - field_group
-  - field_states_ui
-  - language
-  - menu_ui
-  - node
-  - path
-  - rdf
-  - text
-  - user
-  - content_moderation
-  - media_entity
-  - maxlength
-  - slick_media
-  - inline_entity_form
-  - field_states_ui
-  - media_entity_image
-  - media_pinkeye
-  - entity_forms_in_blocks
+  - bt_core:bt_core
+  - content_moderation:content_moderation
+  - drupal:field
+  - drupal:forum
+  - drupal:image
+  - drupal:language
+  - drupal:menu_ui
+  - drupal:node
+  - drupal:path
+  - drupal:rdf
+  - drupal:user
+  - drupal:text
+  - entity_forms_in_blocks:entity_forms_in_blocks
+  - field_group:field_group
+  - field_states_ui:field_states_ui
+  - inline_entity_form:inline_entity_form
+  - maxlength:maxlength
+  - media_entity:media_entity
+  - media_entity_image:media_entity_image
+  - media_pinkeye:media_pinkeye
+  - paragraphs:paragraphs
+  - radix_layouts:radix_layouts
+  - slick_media:slick_media
 package: Btester
