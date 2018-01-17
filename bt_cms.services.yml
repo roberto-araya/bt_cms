@@ -5,7 +5,7 @@ services:
       - { name: event_subscriber }
   bt_cms.breadcrumbs:
     class: Drupal\bt_cms\Breadcrumb\BreadcrumbBuilder
-    arguments: ['@current_user']
+    arguments: ['@config.factry']
     tags:
       - { name: breadcrumb_builder, priority: 1010 }
 #  bt_cms_config.overrider:
