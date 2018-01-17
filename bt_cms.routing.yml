@@ -56,6 +56,6 @@ bt_delete_ipe_page:
 bt_enable_disable_ipe_page:
   path: '/app/website/page/{page}/{op}'
   defaults:
-    _controller: '\Drupal\bt_cms\Controller\CustomPageManagerController::PageOperation'
+    _controller: '\Drupal\bt_cms\Controller\CustomPageManagerController::pageOperation'
   requirements:
     _permission: 'administer pages'

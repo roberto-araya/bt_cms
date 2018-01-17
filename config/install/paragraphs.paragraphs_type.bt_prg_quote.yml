@@ -4,3 +4,4 @@ dependencies: {  }
 id: bt_prg_quote
 label: Quote
 behavior_plugins: {  }
+

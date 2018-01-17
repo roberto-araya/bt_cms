@@ -16,10 +16,10 @@ use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
 
 class ContentLocalTask extends LocalTaskDefault {
 
-    /**
-     * {@inheritdoc}
-     */
-    public function getCacheContexts() {
-        return ['user.roles'];
-    }
+  /**
+   * {@inheritdoc}
+   */
+  public function getCacheContexts() {
+    return ['user.roles'];
+  }
 }

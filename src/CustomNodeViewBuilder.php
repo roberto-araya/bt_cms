@@ -26,12 +26,25 @@ class CustomNodeViewBuilder extends NodeViewBuilder {
 
     // Always display a read more link on teasers because we have no way
     // to know when a teaser view is different than a full view.
-    if (in_array($view_mode,['teaser','bt_box','bt_card','bt_credential','bt_index','bt_miniature','bt_poster','bt_teaser_image'])) {
+    $view_modes = [
+      'teaser',
+      'bt_box',
+      'bt_card',
+      'bt_credential',
+      'bt_index',
+      'bt_miniature',
+      'bt_poster',
+      'bt_teaser_image',
+    ];
+
+    if (in_array($view_mode, $view_modes)) {
       $node_title_stripped = strip_tags($entity->label());
       $links['node-readmore'] = array(
-        'title' => t('Read more<span class="visually-hidden"> about @title</span>', array(
-          '@title' => $node_title_stripped,
-        )),
+        'title' => t(
+          'Read more<span class="visually-hidden"> about @title</span>', array(
+            '@title' => $node_title_stripped,
+          )
+        ),
         'url' => $entity->urlInfo(),
         'language' => $entity->language(),
         'attributes' => array(
@@ -47,4 +60,5 @@ class CustomNodeViewBuilder extends NodeViewBuilder {
       '#attributes' => array('class' => array('links', 'inline')),
     );
   }
+
 }

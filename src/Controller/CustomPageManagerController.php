@@ -1,10 +1,5 @@
 <?php
 
-/**
- * @file
- * Contains \Drupal\bt_cms\Controller\CustomPageManagerController.
- */
-
 namespace Drupal\bt_cms\Controller;
 
 use Drupal\Core\Controller\ControllerBase;
@@ -26,7 +21,7 @@ class CustomPageManagerController extends ControllerBase {
    * @return \Symfony\Component\HttpFoundation\RedirectResponse
    *   A redirect back to the pages list page.
    */
-  public function PageOperation(PageInterface $page, $op) {
+  public function pageOperation(PageInterface $page, $op) {
     $page->$op()->save();
 
     if ($op == 'enable') {
@@ -38,4 +33,5 @@ class CustomPageManagerController extends ControllerBase {
 
     return $this->redirect('bt_page_drag_and_drop');
   }
+
 }

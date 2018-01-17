@@ -2,7 +2,9 @@
   "name": "drupal/bt_cms",
   "type": "drupal-module",
   "description": "This module creates a CMS environment for managing the public content of the application. Adds a simple publishing flow for personas-based content approval.",
-  "keywords": ["Drupal"],
+  "keywords": [
+    "Drupal"
+  ],
   "homepage": "https://www.drupal.org/project/bt_cms",
   "license": "GPL-2.0+",
   "authors": [

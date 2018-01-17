@@ -1,6 +1,14 @@
 <?php
 
+/**
+ * @file
+ * Install, update and uninstall functions for bt_cms.
+ */
+
+/**
+ * Implements hook_install().
+ */
 function bt_cms_install() {
-    // Delete view views.view.taxonomy_term
-    \Drupal::configFactory()->getEditable('views.view.taxonomy_term')->delete();
+  // Delete view views.view.taxonomy_term.
+  \Drupal::configFactory()->getEditable('views.view.taxonomy_term')->delete();
 }
