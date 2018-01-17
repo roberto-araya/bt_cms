@@ -8,8 +8,3 @@ services:
     arguments: ['@config.factry']
     tags:
       - { name: breadcrumb_builder, priority: 1010 }
-#  bt_cms_config.overrider:
-#    class: Drupal\bt_cms\Config\ConfigCMSOverride
-#    arguments: ['@config.storage', '@event_dispatcher', '@config.typed']
-#    tags:
-#      - {name: config.factory.override, priority: 25}
