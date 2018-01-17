@@ -27,8 +27,6 @@ bt_website_content_admin_task:
   base_route: page_manager.page_view_app_website_app_website-panels_variant-0
   weight: 2
   route_name: page_manager.page_view_app_website_content_app_website_content-panels_variant-0
-#  deriver: 'Drupal\bt_cms\Plugin\Menu\LocalTask\ContentDeriverLocalTask'
-#  class: '\Drupal\bt_cms\Plugin\Menu\LocalTask\ContentLocalTask'
 
 bt_website_content_admin_default_task:
   title: 'All Content'
