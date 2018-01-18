@@ -7,6 +7,11 @@ use Drupal\Core\Breadcrumb\BreadcrumbBuilderInterface;
 use Drupal\Core\Routing\RouteMatchInterface;
 use Drupal\Core\Link;
 
+/**
+ * Class BreadcrumbBuilder.
+ *
+ * @package Drupal\bt_cms\Breadcrumb
+ */
 class BreadcrumbBuilder implements BreadcrumbBuilderInterface {
 
   /**

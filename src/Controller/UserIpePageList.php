@@ -5,9 +5,20 @@ namespace Drupal\bt_cms\Controller;
 use Drupal\Core\Url;
 use Drupal\page_manager\Entity\Page;
 
+/**
+ * Class UserIpePageList.
+ *
+ * @package Drupal\bt_cms\Controller
+ */
 class UserIpePageList {
 
-  function build() {
+  /**
+   * Build render array of page list.
+   *
+   * @return array
+   *   Render array.
+   */
+  public function build() {
     // Bring all the pages id that have as id the prefix 'ipe'.
     $query = \Drupal::entityQuery('page')->condition('id', 'ipe_', 'CONTAINS');
     $pages_ids = $query->execute();
@@ -70,7 +81,6 @@ class UserIpePageList {
         '#type' => 'operations',
         '#links' => $operations,
       ];
-
 
       if ($entity->status()) {
         // Build label.

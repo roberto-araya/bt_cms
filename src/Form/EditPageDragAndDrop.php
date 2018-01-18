@@ -8,6 +8,11 @@ use Drupal\page_manager\PageInterface;
 use Drupal\Core\Url;
 use Drupal\page_manager\Entity\PageVariant;
 
+/**
+ * Class EditPageDragAndDrop.
+ *
+ * @package Drupal\bt_cms\Form
+ */
 class EditPageDragAndDrop extends FormBase {
 
   /**
