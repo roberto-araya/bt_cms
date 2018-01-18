@@ -6,6 +6,7 @@ use Drupal\Core\Breadcrumb\Breadcrumb;
 use Drupal\Core\Breadcrumb\BreadcrumbBuilderInterface;
 use Drupal\Core\Routing\RouteMatchInterface;
 use Drupal\Core\Link;
+use Drupal\Core\Config\ConfigFactory;
 
 /**
  * Class BreadcrumbBuilder.
@@ -47,7 +48,7 @@ class BreadcrumbBuilder implements BreadcrumbBuilderInterface {
   /**
    * Class constructor.
    */
-  public function __construct($configFactory) {
+  public function __construct(ConfigFactory $configFactory) {
     $this->siteName = $configFactory->get('system.site')->get('name');
   }
 
