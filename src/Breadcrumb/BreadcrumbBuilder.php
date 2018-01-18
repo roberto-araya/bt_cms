@@ -12,14 +12,14 @@ class BreadcrumbBuilder implements BreadcrumbBuilderInterface {
   /**
    * The Site name.
    *
-   * @var siteName
+   * @var string
    */
   protected $siteName;
 
   /**
    * The routes that will change their breadcrumbs.
    *
-   * @var routes
+   * @var array
    */
   private $routes = array(
     'entity.node.edit_form',
