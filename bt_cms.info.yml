@@ -22,7 +22,6 @@ dependencies:
   - maxlength:maxlength
   - media_entity:media_entity
   - media_entity_image:media_entity_image
-  - media_pinkeye:media_pinkeye
   - paragraphs:paragraphs
   - radix_layouts:radix_layouts
   - slick_media:slick_media

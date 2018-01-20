@@ -5,6 +5,6 @@ services:
       - { name: event_subscriber }
   bt_cms.breadcrumbs:
     class: Drupal\bt_cms\Breadcrumb\BreadcrumbBuilder
-    arguments: ['@config.factry']
+    arguments: ['@config.factory']
     tags:
       - { name: breadcrumb_builder, priority: 1010 }
