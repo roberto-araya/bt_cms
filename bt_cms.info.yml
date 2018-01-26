@@ -21,7 +21,6 @@ dependencies:
   - field_states_ui:field_states_ui
   - inline_entity_form:inline_entity_form
   - maxlength:maxlength
-  - media_entity_image:media_entity_image
   - paragraphs:paragraphs
   - radix_layouts:radix_layouts
   - slick_media:slick_media
