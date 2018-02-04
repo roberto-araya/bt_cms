@@ -27,7 +27,7 @@ class BreadcrumbBuilder implements BreadcrumbBuilderInterface {
    *
    * @var array
    */
-  private $routes = array(
+  private $routes = [
     'entity.node.edit_form',
     'node.add',
     'node.add_page',
@@ -43,7 +43,7 @@ class BreadcrumbBuilder implements BreadcrumbBuilderInterface {
     'bt_create_ipe_page',
     'bt_edit_ipe_page',
     'bt_delete_ipe_page',
-  );
+  ];
 
   /**
    * Class constructor.
@@ -55,9 +55,25 @@ class BreadcrumbBuilder implements BreadcrumbBuilderInterface {
   /**
    * {@inheritdoc}
    */
-  public function applies(RouteMatchInterface $routeMatch) {
+  public function applies(RouteMatchInterface $route_match) {
     $match = $this->routes;
-    if (in_array($routeMatch->getRouteName(), $match)) {
+    if (in_array($route_match->getRouteName(), $match)) {
+      if ($route_match->getRouteName() == 'entity.node.edit_form') {
+        if ($route_match->getParameters()->get('node')->bundle() != 'faq' || $route_match->getParameters()->get('node')->bundle() != 'forum') {
+          return TRUE;
+        }
+        else {
+          return FALSE;
+        }
+      }
+      elseif ($route_match->getRouteName() == 'node.add') {
+        if ($route_match->getParameters()->get('node_type')->get('type') != 'faq' || $route_match->getParameters()->get('node_type')->get('type') != 'forum') {
+          return TRUE;
+        }
+        else {
+          return FALSE;
+        }
+      }
       return TRUE;
     }
     else {
@@ -83,38 +99,26 @@ class BreadcrumbBuilder implements BreadcrumbBuilderInterface {
       $breadcrumb->addLink(Link::createFromRoute($this->siteName, 'page_manager.page_view_app_app-panels_variant-0'));
       $breadcrumb->addLink(Link::createFromRoute('Website', 'page_manager.page_view_app_website_app_website-panels_variant-0'));
     }
-    switch ($route) {
-      case 'entity.node.edit_form':
-        $breadcrumb->addLink(Link::createFromRoute('Content', 'page_manager.page_view_app_website_content_app_website_content-panels_variant-0'));
-        break;
 
-      case 'node.add':
-        $node_type = $route_match->getParameters()->get('node_type')->get('type');
-        if ($node_type != 'faq' && $node_type != 'forum') {
-          $breadcrumb->addLink(Link::createFromRoute('Content', 'page_manager.page_view_app_website_content_app_website_content-panels_variant-0'));
-          $breadcrumb->addLink(Link::createFromRoute('Create Content', 'node.add_page'));
-        }
-        break;
-
-      case 'node.add_page':
-        $breadcrumb->addLink(Link::createFromRoute('Content', 'page_manager.page_view_app_website_content_app_website_content-panels_variant-0'));
-        break;
-
-      case 'bt_add_block':
-        $breadcrumb->addLink(Link::createFromRoute('Blocks', 'page_manager.page_view_app_website_blocks_app_website_blocks-panels_variant-0'));
-        break;
-
-      case 'block_content.add_form':
-        $breadcrumb->addLink(Link::createFromRoute('Blocks', 'page_manager.page_view_app_website_blocks_app_website_blocks-panels_variant-0'));
-        $breadcrumb->addLink(Link::createFromRoute('Add Block', 'bt_add_block'));
-        break;
+    if (in_array($route, ['entity.node.edit_form', 'node.add', 'node.add_page'])) {
+      $breadcrumb->addLink(Link::createFromRoute('Content', 'page_manager.page_view_app_website_content_app_website_content-panels_variant-0'));
+      if ($route == 'node.add') {
+        $breadcrumb->addLink(Link::createFromRoute('Create Content', 'node.add_page'));
+      }
     }
-    $pages = array(
+
+    if (in_array($route, ['bt_add_block', 'block_content.add_form'])) {
+      $breadcrumb->addLink(Link::createFromRoute('Blocks', 'page_manager.page_view_app_website_blocks_app_website_blocks-panels_variant-0'));
+      if ($route == 'block_content.add_form') {
+        $breadcrumb->addLink(Link::createFromRoute('Add Block', 'bt_add_block'));
+      }
+    }
+
+    if (in_array($route, [
       'bt_create_ipe_page',
       'bt_edit_ipe_page',
       'bt_delete_ipe_page',
-    );
-    if (in_array($route, $pages)) {
+    ])) {
       $breadcrumb->addLink(Link::createFromRoute('Pages', 'bt_page_drag_and_drop'));
     }
 
