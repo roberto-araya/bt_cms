@@ -8,7 +8,7 @@ bt_add_block:
   requirements:
     _permission: 'administer blocks'
 
-# Ruta administrativa que muestra una lista de páginas creadas con page_manager
+# Administrative route that show a list of pages created with page_manager.
 bt_page_drag_and_drop:
   path: '/app/website/pages'
   defaults:
@@ -19,7 +19,7 @@ bt_page_drag_and_drop:
   requirements:
     _permission: 'administer pages'
 
-# Ruta de formulario simplificado para crear una entity page
+# Simple form route to create panels pages.
 bt_create_ipe_page:
   path: '/app/website/pages/add'
   defaults:
@@ -30,7 +30,7 @@ bt_create_ipe_page:
   requirements:
     _permission: 'administer pages'
 
-# Ruta de formulario simplificado para editar una entity page.
+# Simple form route to edit panels pages.
 bt_edit_ipe_page:
   path: '/app/website/page/{page}/edit'
   defaults:
@@ -41,7 +41,7 @@ bt_edit_ipe_page:
   requirements:
     _permission: 'administer pages'
 
-# Ruta de formulario simplificado para eliminar una entity page
+# Simple form route to delete panels pages.
 bt_delete_ipe_page:
   path: '/app/website/page/{page}/delete'
   defaults:
@@ -52,7 +52,7 @@ bt_delete_ipe_page:
   requirements:
     _permission: 'administer pages'
 
-# Ruta para activar o desactivar una entity page
+# Route to enable/disable panels pages.
 bt_enable_disable_ipe_page:
   path: '/app/website/page/{page}/{op}'
   defaults:

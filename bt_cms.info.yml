@@ -16,7 +16,6 @@ dependencies:
   - drupal:rdf
   - drupal:user
   - drupal:text
-  - entity_forms_in_blocks:entity_forms_in_blocks
   - field_group:field_group
   - field_states_ui:field_states_ui
   - inline_entity_form:inline_entity_form
