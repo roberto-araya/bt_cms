@@ -9,7 +9,6 @@ dependencies:
     - field_states_ui
     - maxlength
     - text
-    - workbench_moderation
 id: paragraph.bt_prg_quote.default
 targetEntityType: paragraph
 bundle: bt_prg_quote

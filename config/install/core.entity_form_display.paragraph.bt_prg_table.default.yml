@@ -6,7 +6,6 @@ dependencies:
     - paragraphs.paragraphs_type.bt_prg_table
   module:
     - tablefield
-    - workbench_moderation
 id: paragraph.bt_prg_table.default
 targetEntityType: paragraph
 bundle: bt_prg_table

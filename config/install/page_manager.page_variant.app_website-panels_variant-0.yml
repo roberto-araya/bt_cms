@@ -3,8 +3,6 @@ status: true
 dependencies:
   config:
     - page_manager.page.app_website
-    - views.view.bt_recents_comments
-    - views.view.bt_recents_contents
   module:
     - forum
     - panels
@@ -25,28 +23,6 @@ variant_settings:
       context_mapping: {  }
       region: column3
       uuid: 44223bda-5ec9-4148-a513-07d54f3306b8
-      weight: 1
-    cc7341a2-21b1-45f7-a419-d018beb3a898:
-      id: 'views_block:bt_recents_contents-content_list'
-      label: 'Recent Content'
-      provider: views
-      label_display: visible
-      views_label: 'Recent content'
-      items_per_page: none
-      context_mapping: {  }
-      region: column1
-      uuid: cc7341a2-21b1-45f7-a419-d018beb3a898
-      weight: 1
-    144fa0d4-36c8-4218-b0d8-7426c76b73b0:
-      id: 'views_block:bt_recents_comments-comments_list'
-      label: ''
-      provider: views
-      label_display: visible
-      views_label: ''
-      items_per_page: none
-      context_mapping: {  }
-      region: column2
-      uuid: 144fa0d4-36c8-4218-b0d8-7426c76b73b0
       weight: 1
   id: panels_variant
   uuid: 16d8a515-c650-41b2-a9b5-e0d2a628ccd1
