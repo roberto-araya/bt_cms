@@ -20,7 +20,7 @@
     "source": "http://git.drupal.org/project/bt_cms.git"
   },
   "require": {
-    "drupal/bt_core": "1.x-dev",
+    "drupal/bt_core": "dev-dev",
     "drupal/custom_pub": "1.x-dev",
     "drupal/paragraphs": "1.x-dev"
   }
