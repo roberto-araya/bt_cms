@@ -9,6 +9,15 @@
  * Implements hook_install().
  */
 function bt_cms_install() {
-  // Delete view views.view.taxonomy_term.
-  \Drupal::configFactory()->getEditable('views.view.taxonomy_term')->delete();
+  // Disable taxonomy_term view.
+  \Drupal::entityTypeManager()->getStorage('view')
+    ->load('taxonomy_term')
+    ->setStatus(FALSE)
+    ->save();
+
+  // Disable comment view.
+  \Drupal::entityTypeManager()->getStorage('view')
+    ->load('comment')
+    ->setStatus(FALSE)
+    ->save();
 }
