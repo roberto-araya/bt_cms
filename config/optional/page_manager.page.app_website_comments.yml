@@ -2,7 +2,7 @@ langcode: en
 status: true
 dependencies:
   module:
-    - user
+    - personas
 id: app_website_comments
 label: Comments
 description: 'Page with the list of all comments left in the application.'
@@ -11,9 +11,9 @@ path: /app/website/comments
 access_logic: and
 access_conditions:
   -
-    id: user_role
-    roles:
-      bt_moderate_comments: bt_moderate_comments
+    id: persona
+    personas:
+      bt_content_editor_publisher: bt_content_editor_publisher
     negate: false
     context_mapping:
       user: current_user
