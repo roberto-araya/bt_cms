@@ -1,0 +1,4 @@
+label: 'Panel de comentarios'
+variant: panels_variant
+variant_settings:
+  page_title: Comentarios
