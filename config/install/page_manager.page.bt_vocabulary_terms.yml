@@ -1,3 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: bt_vocabulary_terms
 label: 'Vocabulary Terms'
 description: 'A page that show a list of tagging content with the same vocabulary term.'
 use_admin_theme: false
