@@ -263,7 +263,7 @@ display:
       query:
         type: views_query
         options: {  }
-      display_description: 'Displays a list of contents tagged with the same term.'
+      display_description: 'Displays a list of contents tagging with the same term.'
       block_description: 'Vocabulary terms'
       block_category: 'Admin UI'
       use_ajax: true

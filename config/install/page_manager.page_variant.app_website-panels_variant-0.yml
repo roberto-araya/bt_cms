@@ -11,19 +11,7 @@ id: app_website-panels_variant-0
 label: 'Website Dashboard'
 variant: panels_variant
 variant_settings:
-  blocks:
-    44223bda-5ec9-4148-a513-07d54f3306b8:
-      id: forum_new_block
-      label: 'New forum''s topic'
-      provider: forum
-      label_display: visible
-      properties:
-        administrative: '1'
-      block_count: 5
-      context_mapping: {  }
-      region: column3
-      uuid: 44223bda-5ec9-4148-a513-07d54f3306b8
-      weight: 1
+  blocks: {  }
   id: panels_variant
   uuid: 16d8a515-c650-41b2-a9b5-e0d2a628ccd1
   label: null

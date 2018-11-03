@@ -14,8 +14,13 @@ class RouteSubscriber extends RouteSubscriberBase {
    * {@inheritdoc}
    */
   public function alterRoutes(RouteCollection $collection) {
-    // Remove unused routes.
-    $collection->remove(['comment.admin']);
+    // Remove unused comment route.
+    //$collection->remove(['comment.admin_approval']);
+
+    // Change path of comment.admin.
+    if ($route = $collection->get('comment.admin')) {
+      $route->setPath('/app/website/comments');
+    }
 
     // Change path '/node/add' to '/app/website/content/add'.
     if ($route = $collection->get('node.add_page')) {

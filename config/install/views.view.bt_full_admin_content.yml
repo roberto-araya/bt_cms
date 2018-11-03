@@ -28,7 +28,7 @@ display:
         options:
           submit_button: Filter
           reset_button: false
-          reset_button_label: Delete
+          reset_button_label: Reset
           exposed_sorts_label: 'Sort by'
           expose_sort_order: false
           sort_asc_label: Asc
@@ -38,10 +38,10 @@ display:
         options:
           items_per_page: 25
           tags:
-            previous: '‹ Previus'
-            next: 'Next ›'
-            first: '« First'
-            last: 'Last »'
+            previous: '< Previous'
+            next: 'Next >'
+            first: '<< First'
+            last: 'Last >>'
       style:
         type: table
         options:
@@ -132,7 +132,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: Seleccionar
+          label: Select
           exclude: false
           alter:
             alter_text: false
@@ -517,7 +517,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: Operaciones
+          label: Operations
           exclude: false
           alter:
             alter_text: false
@@ -847,7 +847,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: Seleccionar
+          label: Select
           exclude: false
           alter:
             alter_text: false

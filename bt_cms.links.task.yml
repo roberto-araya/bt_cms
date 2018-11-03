@@ -48,6 +48,6 @@ bt_website_content_writer_default_task:
 
 bt_website_content_comments_task:
   title: 'Comments'
-  route_name: page_manager.page_view_app_website_comments_app_website_comments-panels_variant-0
+  route_name: comment.admin
   parent_id: bt_website_content_admin_task
   weight: 2

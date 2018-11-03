@@ -1,0 +1,83 @@
+label: 'Administración Contenido Completo'
+description: 'Presenta una lista administrativa de contenido.'
+display:
+  default:
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Filrar
+          reset_button_label: Restablecer
+          exposed_sorts_label: 'Ordenar por'
+      pager:
+        options:
+          tags:
+            previous: '< Previos'
+            next: 'Siguientes >'
+            first: '<< Primeros'
+            last: 'Últimos >>'
+      fields:
+        node_bulk_form:
+          label: Seleccionar
+          action_title: 'Aplicar la acción sobre los contenidos seleccionados'
+        title:
+          label: Título
+        type:
+          label: 'Tipo Contenido'
+        name:
+          label: Autor
+        moderation_state_1:
+          label: 'Estado Publicación'
+        changed:
+          label: 'Última Modificación'
+        operations:
+          label: Operaciones
+      filters:
+        title:
+          expose:
+            label: Título
+        uid:
+          expose:
+            label: Autor
+            description: 'Para filtrar por más de un autor, separe los nombres con coma.'
+        type_expose:
+          expose:
+            label: 'Tipo Contenido'
+        moderation_state:
+          expose:
+            label: Estado
+          group_info:
+            label: 'Estado Publicación'
+            group_items:
+              1:
+                title: Borrador
+              2:
+                title: 'Necesita Revisión'
+              3:
+                title: Publicado
+              4:
+                title: Archivado
+      empty:
+        area_text_custom:
+          content: 'No hay contenido disponible aún.'
+    display_title: Maestro
+  content_admin_list:
+    display_title: 'Listado Contenido Bloque'
+    display_options:
+      block_description: 'Listado de todo el contenido del sitio.'
+      display_description: 'Bloque administrativo que muestra una lista de todo el contenido de los usuarios.'
+      fields:
+        node_bulk_form:
+          label: Seleccionar
+          action_title: 'Aplicar la acción sobre el contenido seleccionado'
+        title:
+          label: Título
+        type:
+          label: 'Tipo Contenido'
+        name:
+          label: Autor
+        moderation_state_1:
+          label: 'Estado Publicación'
+        changed:
+          label: 'Última Modificación'
+        operations:
+          label: Operaciones
