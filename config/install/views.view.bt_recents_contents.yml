@@ -8,7 +8,7 @@ id: bt_recents_contents
 label: 'Recent Content'
 module: node
 description: 'Recent content created on the site.'
-tag: MyPymeWeb
+tag: Btester
 base_table: node_field_data
 base_field: nid
 core: 8.x

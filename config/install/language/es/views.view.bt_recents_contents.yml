@@ -1,0 +1,21 @@
+label: 'Contenido Reciente'
+description: 'Contenido reciente creado en el sitio.'
+display:
+  default:
+    display_title: Maestro
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Filtrar
+          reset_button_label: Restablecer
+          exposed_sorts_label: 'Ordenar por'
+      title: 'Contenido Reciente'
+      empty:
+        area_text_custom:
+          content: 'No hay contenido disponible.'
+  content_list:
+    display_title: 'Contenido Reciente'
+    display_options:
+      block_category: 'Listas Contenido'
+      display_description: 'Muestra una lista con el título y la última modificación de los contenidos recientemente agregados al sistema.'
+      block_description: 'Contenido Reciente'

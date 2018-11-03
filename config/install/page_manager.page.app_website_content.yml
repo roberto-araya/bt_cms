@@ -5,7 +5,7 @@ dependencies:
     - user
 id: app_website_content
 label: Content
-description: 'Page with lists of content collections.'
+description: 'Page that show an administrative lists of content.'
 use_admin_theme: true
 path: /app/website/content
 access_logic: and

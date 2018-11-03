@@ -1,0 +1,21 @@
+label: 'Comentarios Recientes'
+description: 'Comentarios recientes dejados en el sitio.'
+display:
+  default:
+    display_title: Maestro
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Filtrar
+          reset_button_label: Restablecer
+          exposed_sorts_label: 'Ordenar por'
+      title: 'Comentarios recientes'
+      empty:
+        area_text_custom:
+          content: 'No hay comentarios disponibles.'
+  comments_list:
+    display_title: 'Comentarios recientes'
+    display_options:
+      block_description: 'Comentarios recientes'
+      block_category: 'Listas Contenido'
+      display_description: 'Muestra una lista de los comentarios agregados más recientes.'
