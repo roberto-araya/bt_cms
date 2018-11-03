@@ -22,6 +22,13 @@ function bt_cms_menu_local_actions_alter(&$local_actions) {
  * Implements hook_menu_local_tasks_alter().
  */
 function bt_cms_menu_local_tasks_alter(&$data, $route_name) {
+  if ($route_name == 'comment.admin') {
+    unset($data['tabs'][0]['comment.admin']);
+    unset($data['tabs'][0]['system.admin_content']);
+    unset($data['tabs'][1]['comment.admin_new']);
+    unset($data['tabs'][1]['comment.admin_approval']);
+  }
+
   $current_user = \Drupal::service('current_user');
   $user_id = $current_user->id();
   $user_account = User::load($user_id);
@@ -32,7 +39,7 @@ function bt_cms_menu_local_tasks_alter(&$data, $route_name) {
     'page_manager.page_view_app_website_app_website-panels_variant-0',
     'page_manager.page_view_app_website_content_app_website_content-panels_variant-0',
     'page_manager.page_view_app_website_content_app_website_content-panels_variant-1',
-    'page_manager.page_view_app_website_comments_app_website_comments-panels_variant-0',
+    'comment.admin',
     'page_manager.page_view_app_website_documents_app_website_documents-panels_variant-0',
     'page_manager.page_view_app_website_documents_app_website_documents-panels_variant-1',
     'page_manager.page_view_app_website_media_app_website_media-panels_variant-0',
