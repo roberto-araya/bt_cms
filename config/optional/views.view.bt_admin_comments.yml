@@ -56,10 +56,10 @@ display:
           id: 0
           total_pages: null
           tags:
-            previous: '‹ Previus'
-            next: 'Next ›'
-            first: '« First'
-            last: 'Last »'
+            previous: '< Previous'
+            next: 'Next >'
+            first: '<< First'
+            last: 'Last >>'
           expose:
             items_per_page: false
             items_per_page_label: 'Items per page'
@@ -609,7 +609,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: Operaciones
+          label: Operations
           exclude: false
           alter:
             alter_text: false
