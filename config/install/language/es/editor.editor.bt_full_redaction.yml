@@ -1,0 +1,67 @@
+settings:
+  toolbar:
+    rows:
+      -
+        -
+          name: Otro
+          items:
+            - Format
+            - Styles
+        -
+          name: Formato
+          items:
+            - Bold
+            - Italic
+            - Strike
+            - Underline
+            - Subscript
+            - RemoveFormat
+            - Superscript
+        -
+          name: Alineación
+          items:
+            - JustifyLeft
+            - JustifyCenter
+            - JustifyRight
+            - JustifyBlock
+            - Outdent
+            - Indent
+        -
+          name: Listas
+          items:
+            - BulletedList
+            - NumberedList
+        -
+          name: Enlaces
+          items:
+            - DrupalLink
+            - DrupalUnlink
+            - Linkit
+        -
+          name: Edición
+          items:
+            - Cut
+            - Copy
+            - Paste
+            - PasteFromWord
+            - PasteText
+            - SpecialChar
+            - HorizontalRule
+            - Table
+        -
+          name: Multimedia
+          items:
+            - Blockquote
+            - DrupalImage
+            - video_embed
+        -
+          name: Maximizar
+          items:
+            - Undo
+            - Redo
+            - Maximize
+            - ShowBlocks
+        -
+          name: Herramientas
+          items:
+            - Source
