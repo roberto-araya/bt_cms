@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.bt_by_default
+label: 'By default'
+targetEntityType: node
+cache: true

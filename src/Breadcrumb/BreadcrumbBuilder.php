@@ -31,18 +31,12 @@ class BreadcrumbBuilder implements BreadcrumbBuilderInterface {
     'entity.node.edit_form',
     'node.add',
     'node.add_page',
-    'bt_add_block',
+    'bt_cms.add_block',
     'block_content.add_form',
-    'page_manager.page_view_app_app-panels_variant-0',
-    'page_manager.page_view_app_website_app_website-panels_variant-0',
-    'page_manager.page_view_app_website_content_app_website_content-panels_variant-0',
-    'page_manager.page_view_app_website_content_app_website_content-panels_variant-1',
-    'page_manager.page_view_app_website_comments_app_website_comments-panels-variant-0',
-    'page_manager.page_view_app_website_blocks_app_website_blocks-panels_variant-0',
-    'bt_page_drag_and_drop',
-    'bt_create_ipe_page',
-    'bt_edit_ipe_page',
-    'bt_delete_ipe_page',
+    'bt_core.app',
+    'bt_cms.website',
+    'bt_cms.website_content',
+    'bt_cms.website_blocks',
   ];
 
   /**
@@ -89,37 +83,29 @@ class BreadcrumbBuilder implements BreadcrumbBuilderInterface {
     $breadcrumb = new Breadcrumb();
     $breadcrumb->addCacheContexts(["url"]);
 
-    if ($route == 'page_manager.page_view_app_app-panels_variant-0') {
-      $breadcrumb->addLink(Link::createFromRoute('Home', 'page_manager.page_view_ipe_home_ipe_home-panels_variant-0'));
+    if ($route == 'bt_core.app') {
+      #$breadcrumb->addLink(Link::createFromRoute('Home', 'page_manager.page_view_ipe_home_ipe_home-panels_variant-0'));
     }
-    elseif ($route == 'page_manager.page_view_app_website_app_website-panels_variant-0') {
-      $breadcrumb->addLink(Link::createFromRoute($this->siteName, 'page_manager.page_view_app_app-panels_variant-0'));
+    elseif ($route == 'bt_cms.website') {
+      $breadcrumb->addLink(Link::createFromRoute($this->siteName, 'bt_core.app'));
     }
     else {
-      $breadcrumb->addLink(Link::createFromRoute($this->siteName, 'page_manager.page_view_app_app-panels_variant-0'));
-      $breadcrumb->addLink(Link::createFromRoute('Website', 'page_manager.page_view_app_website_app_website-panels_variant-0'));
+      $breadcrumb->addLink(Link::createFromRoute($this->siteName, 'bt_core.app'));
+      $breadcrumb->addLink(Link::createFromRoute('Website', 'bt_cms.website'));
     }
 
     if (in_array($route, ['entity.node.edit_form', 'node.add', 'node.add_page'])) {
-      $breadcrumb->addLink(Link::createFromRoute('Content', 'page_manager.page_view_app_website_content_app_website_content-panels_variant-0'));
+      $breadcrumb->addLink(Link::createFromRoute('Content', 'bt_cms.website_content'));
       if ($route == 'node.add') {
         $breadcrumb->addLink(Link::createFromRoute('Create Content', 'node.add_page'));
       }
     }
 
-    if (in_array($route, ['bt_add_block', 'block_content.add_form'])) {
-      $breadcrumb->addLink(Link::createFromRoute('Blocks', 'page_manager.page_view_app_website_blocks_app_website_blocks-panels_variant-0'));
+    if (in_array($route, ['bt_cms.add_block', 'block_content.add_form'])) {
+      $breadcrumb->addLink(Link::createFromRoute('Blocks', 'bt_cms.website_blocks'));
       if ($route == 'block_content.add_form') {
-        $breadcrumb->addLink(Link::createFromRoute('Add Block', 'bt_add_block'));
+        $breadcrumb->addLink(Link::createFromRoute('Add Block', 'bt_cms.add_block'));
       }
-    }
-
-    if (in_array($route, [
-      'bt_create_ipe_page',
-      'bt_edit_ipe_page',
-      'bt_delete_ipe_page',
-    ])) {
-      $breadcrumb->addLink(Link::createFromRoute('Pages', 'bt_page_drag_and_drop'));
     }
 
     return $breadcrumb;

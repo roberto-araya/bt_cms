@@ -13,59 +13,50 @@ use Drupal\Core\Entity\EntityTypeInterface;
  * Implements hook_menu_local_actions_alter().
  */
 function bt_cms_menu_local_actions_alter(&$local_actions) {
-  $local_actions['node.add_page']['appears_on'][0] = 'page_manager.page_view_app_website_content_app_website_content-panels_variant-0';
-  $local_actions['node.add_page']['appears_on'][1] = 'page_manager.page_view_app_website_content_app_website_content-panels_variant-1';
-
+  $local_actions['node.add_page']['appears_on'][0] = 'bt_cms.website_content';
 }
 
 /**
  * Implements hook_menu_local_tasks_alter().
- */
-function bt_cms_menu_local_tasks_alter(&$data, $route_name) {
-  if ($route_name == 'comment.admin') {
-    unset($data['tabs'][0]['comment.admin']);
-    unset($data['tabs'][0]['system.admin_content']);
-    unset($data['tabs'][1]['comment.admin_new']);
-    unset($data['tabs'][1]['comment.admin_approval']);
-  }
+ *
+*/
+ function bt_cms_menu_local_tasks_alter(&$data, $route_name) {
+  #if ($route_name == 'comment.admin') {
+  #  unset($data['tabs'][0]['comment.admin']);
+  #  unset($data['tabs'][0]['system.admin_content']);
+  #  unset($data['tabs'][1]['comment.admin_new']);
+  #  unset($data['tabs'][1]['comment.admin_approval']);
+  #}
 
-  $current_user = \Drupal::service('current_user');
-  $user_id = $current_user->id();
-  $user_account = User::load($user_id);
+  #$current_user = \Drupal::service('current_user');
+  #$user_id = $current_user->id();
+  #$user_account = User::load($user_id);
 
-  $routes = [
-    'page_manager.page_view_app_app-panels_variant-0',
-    'bt_page_drag_and_drop',
-    'page_manager.page_view_app_website_app_website-panels_variant-0',
-    'page_manager.page_view_app_website_content_app_website_content-panels_variant-0',
-    'page_manager.page_view_app_website_content_app_website_content-panels_variant-1',
-    'comment.admin',
-    'page_manager.page_view_app_website_documents_app_website_documents-panels_variant-0',
-    'page_manager.page_view_app_website_documents_app_website_documents-panels_variant-1',
-    'page_manager.page_view_app_website_media_app_website_media-panels_variant-0',
-    'page_manager.page_view_app_website_media_app_website_media-panels_variant-1',
-    'page_manager.page_view_app_website_polls_app_website_polls-panels_variant-0',
-    'page_manager.page_view_app_website_forums_app_website_forums-panels_variant-0',
-    'page_manager.page_view_app_website_faq_app_website_faq-panels_variant-0',
-    'page_manager.page_view_app_website_blocks_app_website_blocks-panels_variant-0',
-  ];
+  #$routes = [
+  #  'bt_core.app',
+  #  'bt_cms.website',
+  #  'bt_cms.website_content',
+  #  'comment.admin',
+  #  'bt_cms.website_blocks',
+  #];
 
-  if (in_array($route_name, $routes)) {
-    if (PersonaUtility::hasPersona($user_account, 'bt_content_editor_publisher')) {
-      unset($data['tabs'][0]['bt_website_content_writer_task']);
-      unset($data['tabs'][1]['bt_website_content_writer_default_task']);
-      unset($data['tabs'][0]['bt_website_documents_writer_task']);
-      unset($data['tabs'][0]['bt_website_media_writer_task']);
-    }
-    elseif (PersonaUtility::hasPersona($user_account, 'bt_content_creator')) {
-      unset($data['tabs'][0]['bt_website_content_admin_task']);
-      unset($data['tabs'][1]['bt_website_content_admin_default_task']);
-      unset($data['tabs'][0]['bt_website_documents_admin_task']);
-      unset($data['tabs'][0]['bt_website_media_admin_task']);
-    }
-  }
+  #if (in_array($route_name, $routes)) {
+  #  if (PersonaUtility::hasPersona($user_account, 'bt_content_editor_publisher')) {
+  #    unset($data['tabs'][0]['bt_website_content_writer_task']);
+  #    unset($data['tabs'][1]['bt_website_content_writer_default_task']);
+  #    unset($data['tabs'][0]['bt_website_documents_writer_task']);
+  #    unset($data['tabs'][0]['bt_website_media_writer_task']);
+  #  }
+  #  elseif (PersonaUtility::hasPersona($user_account, 'bt_content_creator')) {
+  #    unset($data['tabs'][0]['bt_website_content_admin_task']);
+  #    unset($data['tabs'][1]['bt_website_content_admin_default_task']);
+  #    unset($data['tabs'][0]['bt_website_documents_admin_task']);
+  #    unset($data['tabs'][0]['bt_website_media_admin_task']);
+  #  }
+  #}
 
 }
+
 
 /**
  * Implements hook_entity_base_field_info_alter().
@@ -103,4 +94,17 @@ function bt_cms_node_links_alter(&$links, $entity, &$context) {
     $links['#theme'] = 'links__' . $bundle . '_' . $view_mode;
   }
 
+}
+
+/**
+ * Implements hook_local_tasks_alter().
+ */
+function bt_cms_local_tasks_alter(&$local_tasks) {
+  unset($local_tasks['comment.admin']);
+  $local_tasks['system.admin_content']['base_route'] = 'bt_cms.website';
+  $local_tasks['system.admin_content']['route_name'] = 'bt_cms.website_content';
+  $local_tasks['comment.admin_new']['parent_id'] = 'system.admin_content';
+  $local_tasks['comment.admin_new']['weight'] = 2;
+  $local_tasks['comment.admin_approval']['parent_id'] = 'system.admin_content';
+  $local_tasks['comment.admin_approval']['weight'] = 3;
 }

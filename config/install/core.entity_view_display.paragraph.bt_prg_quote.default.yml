@@ -1,0 +1,30 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.bt_prg_quote.field_bt_paragraph
+    - field.field.paragraph.bt_prg_quote.field_bt_source
+    - paragraphs.paragraphs_type.bt_prg_quote
+  module:
+    - text
+id: paragraph.bt_prg_quote.default
+targetEntityType: paragraph
+bundle: bt_prg_quote
+mode: default
+content:
+  field_bt_paragraph:
+    type: text_default
+    weight: 0
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_bt_source:
+    type: string
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden: {  }

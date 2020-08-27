@@ -1,4 +1,4 @@
-bt_add_block:
+bt_cms.add_block:
   path: '/app/website/blocks/add'
   defaults:
     _controller: '\Drupal\block_content\Controller\BlockContentController::add'
@@ -8,54 +8,32 @@ bt_add_block:
   requirements:
     _permission: 'administer blocks'
 
-# Administrative route that show a list of pages created with page_manager.
-bt_page_drag_and_drop:
-  path: '/app/website/pages'
+bt_cms.website:
+  path: '/app/website'
   defaults:
-    _controller: '\Drupal\bt_cms\Controller\UserIpePageList::build'
-    _title: 'Pages drag and drop'
+    _controller: '\Drupal\bt_core\Controller\AppController::content'
+    _title: 'Website'
   options:
     _admin_route: TRUE
   requirements:
-    _permission: 'administer pages'
+    _role: 'bt_add_forum_discussion+bt_moderate_comments+bt_create_content+bt_edit_publish_content+bt_build_block_pages'
 
-# Simple form route to create panels pages.
-bt_create_ipe_page:
-  path: '/app/website/pages/add'
+bt_cms.website_blocks:
+  path: '/app/website/blocks'
   defaults:
-    _form: '\Drupal\bt_cms\Form\AddPageDragAndDrop'
-    _title: 'Add page'
+    _controller: '\Drupal\bt_core\Controller\AppController::content'
+    _title: 'Blocks'
   options:
     _admin_route: TRUE
   requirements:
-    _permission: 'administer pages'
+    _role: 'bt_admin_blocks'
 
-# Simple form route to edit panels pages.
-bt_edit_ipe_page:
-  path: '/app/website/page/{page}/edit'
+bt_cms.website_content:
+  path: '/app/website/content'
   defaults:
-    _form: '\Drupal\bt_cms\Form\EditPageDragAndDrop'
-    _title: 'Edit page drag and drop'
+    _controller: '\Drupal\bt_core\Controller\AppController::content'
+    _title: 'Content'
   options:
     _admin_route: TRUE
   requirements:
-    _permission: 'administer pages'
-
-# Simple form route to delete panels pages.
-bt_delete_ipe_page:
-  path: '/app/website/page/{page}/delete'
-  defaults:
-    _form: '\Drupal\bt_cms\Form\DeletePageDragAndDrop'
-    _title: 'Delete drag and drop'
-  options:
-    _admin_route: TRUE
-  requirements:
-    _permission: 'administer pages'
-
-# Route to enable/disable panels pages.
-bt_enable_disable_ipe_page:
-  path: '/app/website/page/{page}/{op}'
-  defaults:
-    _controller: '\Drupal\bt_cms\Controller\CustomPageManagerController::pageOperation'
-  requirements:
-    _permission: 'administer pages'
+    _role: 'bt_create_content+bt_edit_publish_content'

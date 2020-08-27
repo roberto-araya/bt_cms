@@ -27,5 +27,5 @@ dependencies:
   - inline_entity_form:inline_entity_form
   - maxlength:maxlength
   - radix_layouts:radix_layouts
-  - slick_media:slick_media
+  - slick:slick
 package: Btester

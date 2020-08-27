@@ -1,62 +1,39 @@
-bt_website_menu:
+bt_cms.website_menu:
   title: 'Website'
   description: 'Manage your website'
-  route_name: page_manager.page_view_app_website_app_website-panels_variant-0
+  route_name: bt_cms.website
   weight: 1
   expanded: TRUE
   menu_name: bt-menu-app
 
-bt_page_drag_and_drop_menu:
-  title: 'Pages'
-  description: 'Page list'
-  parent: bt_website_menu
-  route_name: bt_page_drag_and_drop
-  weight: -1
-  menu_name: bt-menu-app
-
-bt_create_ipe_page_menu:
-  title: 'Create page'
-  description: 'Create drag and drop page'
-  parent: bt_page_drag_and_drop_menu
-  route_name: bt_create_ipe_page
-  weight: 0
-  menu_name: bt-menu-app
-
-bt_website_blocks_menu:
+bt_cms.website_blocks_menu:
   title: 'Blocks'
   description: 'List all blocks'
-  parent: bt_website_menu
-  route_name: page_manager.page_view_app_website_blocks_app_website_blocks-panels_variant-0
+  parent: bt_cms.website_menu
+  route_name: bt_cms.website_blocks
   weight: 0
   menu_name: bt-menu-app
 
-bt_website_blocks_add_menu:
+bt_cms.website_blocks_add_menu:
   title: 'Create block'
   description: 'Create new block'
-  parent: bt_website_blocks_menu
-  route_name: bt_add_block
+  parent: bt_cms.website_blocks_menu
+  route_name: bt_cms.add_block
   weight: 0
   menu_name: bt-menu-app
 
-bt_website_content_menu:
+bt_cms.website_content_menu:
   title: 'Content'
   description: 'List of all content'
-  parent: bt_website_menu
-  route_name: page_manager.page_view_app_website_content_app_website_content-panels_variant-0
+  parent: bt_cms.website_menu
+  route_name: system.admin_content
   weight: 0
   menu_name: bt-menu-app
 
-bt_website_content_add_menu:
+bt_cms.website_content_add_menu:
   title: 'Create content'
   description: 'Create content'
-  parent: bt_website_content_menu
+  parent: bt_cms.website_content_menu
   route_name: node.add_page
   weight: 0
-  menu_name: bt-menu-app
-
-bt_settings_menu:
-  title: 'Settings'
-  description: 'Applications settings'
-  route_name: system.admin
-  weight: 7
   menu_name: bt-menu-app

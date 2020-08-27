@@ -1,0 +1,38 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.bt_content
+  module:
+    - personas
+    - system
+    - views
+  theme:
+    - thunder_admin
+id: views_block__thunder_bt_content_all
+theme: thunder_admin
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:bt_content-all'
+settings:
+  id: 'views_block:bt_content-all'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: '20'
+visibility:
+  persona:
+    id: persona
+    personas:
+      bt_content_editor_publisher: bt_content_editor_publisher
+      bt_web_admin: bt_web_admin
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+  request_path:
+    id: request_path
+    pages: /app/website/content
+    negate: false
+    context_mapping: {  }

@@ -16,6 +16,8 @@ class CustomNodeController extends NodeController {
     $build = parent::addPage();
     unset($build['#content']['faq']);
     unset($build['#content']['forum']);
+    unset($build['#content']['article']);
+    unset($build['#content']['page']);
     return $build;
   }
 

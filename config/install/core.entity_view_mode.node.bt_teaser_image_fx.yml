@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.bt_teaser_image_fx
+label: 'Teaser Image FX'
+targetEntityType: node
+cache: true

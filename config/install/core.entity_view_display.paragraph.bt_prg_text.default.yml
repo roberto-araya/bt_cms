@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.bt_prg_text.field_bt_paragraph
+    - paragraphs.paragraphs_type.bt_prg_text
+  module:
+    - text
+id: paragraph.bt_prg_text.default
+targetEntityType: paragraph
+bundle: bt_prg_text
+mode: default
+content:
+  field_bt_paragraph:
+    type: text_default
+    weight: 0
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }
