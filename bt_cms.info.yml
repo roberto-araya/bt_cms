@@ -4,8 +4,7 @@ type: module
 core: 8.x
 core_version_requirement: ^8
 dependencies:
-  - bt_core:bt_core
-  - content_moderation:content_moderation
+  - drupal:content_moderation
   - drupal:field
   - drupal:forum
   - drupal:image
@@ -17,6 +16,7 @@ dependencies:
   - drupal:rdf
   - drupal:user
   - drupal:text
+  - bt_core:bt_core
   - custom_pub:custom_pub
   - paragraphs:paragraphs
   - video_embed_field:video_embed_field
