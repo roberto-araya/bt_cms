@@ -14,9 +14,6 @@ class RouteSubscriber extends RouteSubscriberBase {
    * {@inheritdoc}
    */
   public function alterRoutes(RouteCollection $collection) {
-    // Remove unused comment route.
-    //$collection->remove(['comment.admin_approval']);
-
     // Change path of comment.admin.
     if ($route = $collection->get('comment.admin')) {
       $route->setPath('/app/website/content/comments');
@@ -33,7 +30,8 @@ class RouteSubscriber extends RouteSubscriberBase {
       $route->setPath('/app/website/content/create');
       $route->setDefaults([
         '_controller' => '\Drupal\bt_cms\Controller\CustomNodeController::addPage',
-        '_title' => 'Create Content']);
+        '_title' => 'Create Content',
+      ]);
     }
     // Change path '/node/add/{node_type}'
     // to '/app/website/content/add/{node_type}'.
@@ -43,16 +41,17 @@ class RouteSubscriber extends RouteSubscriberBase {
     // Change path system.admin_content.
     if ($route = $collection->get('system.admin_content')) {
       $route->setPath('/app/website/content');
-      #$route->setDefault('_controller', '\Drupal\bt_core\Controller\AppController::content');
+      /* route->setDefault(
+      _controller', '\Drupal\bt_core\Controller\AppController::content');*/
     }
-    //$collection->remove(['system.admin_content']);
-    
+
+    // $collection->remove(['system.admin_content']);
     // Change path.
     if ($route = $collection->get('content_moderation.admin_moderated_content')) {
       $route->setPath('/app/website/content/moderated');
       $route->setOption('_admin_route', TRUE);
     }
-  
+
   }
 
 }

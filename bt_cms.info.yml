@@ -2,6 +2,7 @@ name: Btester CMS
 description: ''
 type: module
 core: 8.x
+core_version_requirement: ^8
 dependencies:
   - bt_core:bt_core
   - content_moderation:content_moderation

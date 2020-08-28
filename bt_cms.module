@@ -5,8 +5,6 @@
  * Module file for bt_cms.
  */
 
-use Drupal\user\Entity\User;
-use Drupal\personas\PersonaUtility;
 use Drupal\Core\Entity\EntityTypeInterface;
 
 /**
@@ -15,48 +13,6 @@ use Drupal\Core\Entity\EntityTypeInterface;
 function bt_cms_menu_local_actions_alter(&$local_actions) {
   $local_actions['node.add_page']['appears_on'][0] = 'bt_cms.website_content';
 }
-
-/**
- * Implements hook_menu_local_tasks_alter().
- *
-*/
- function bt_cms_menu_local_tasks_alter(&$data, $route_name) {
-  #if ($route_name == 'comment.admin') {
-  #  unset($data['tabs'][0]['comment.admin']);
-  #  unset($data['tabs'][0]['system.admin_content']);
-  #  unset($data['tabs'][1]['comment.admin_new']);
-  #  unset($data['tabs'][1]['comment.admin_approval']);
-  #}
-
-  #$current_user = \Drupal::service('current_user');
-  #$user_id = $current_user->id();
-  #$user_account = User::load($user_id);
-
-  #$routes = [
-  #  'bt_core.app',
-  #  'bt_cms.website',
-  #  'bt_cms.website_content',
-  #  'comment.admin',
-  #  'bt_cms.website_blocks',
-  #];
-
-  #if (in_array($route_name, $routes)) {
-  #  if (PersonaUtility::hasPersona($user_account, 'bt_content_editor_publisher')) {
-  #    unset($data['tabs'][0]['bt_website_content_writer_task']);
-  #    unset($data['tabs'][1]['bt_website_content_writer_default_task']);
-  #    unset($data['tabs'][0]['bt_website_documents_writer_task']);
-  #    unset($data['tabs'][0]['bt_website_media_writer_task']);
-  #  }
-  #  elseif (PersonaUtility::hasPersona($user_account, 'bt_content_creator')) {
-  #    unset($data['tabs'][0]['bt_website_content_admin_task']);
-  #    unset($data['tabs'][1]['bt_website_content_admin_default_task']);
-  #    unset($data['tabs'][0]['bt_website_documents_admin_task']);
-  #    unset($data['tabs'][0]['bt_website_media_admin_task']);
-  #  }
-  #}
-
-}
-
 
 /**
  * Implements hook_entity_base_field_info_alter().

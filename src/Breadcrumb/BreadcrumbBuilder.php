@@ -83,10 +83,14 @@ class BreadcrumbBuilder implements BreadcrumbBuilderInterface {
     $breadcrumb = new Breadcrumb();
     $breadcrumb->addCacheContexts(["url"]);
 
-    if ($route == 'bt_core.app') {
-      #$breadcrumb->addLink(Link::createFromRoute('Home', 'page_manager.page_view_ipe_home_ipe_home-panels_variant-0'));
-    }
-    elseif ($route == 'bt_cms.website') {
+    /*if ($route == 'bt_core.app') {
+    $breadcrumb->addLink(
+    Link::createFromRoute(
+    'Home', 'page_manager.page_view_ipe_home_ipe_home-panels_variant-0'
+    ));
+    }*/
+
+    if ($route == 'bt_cms.website') {
       $breadcrumb->addLink(Link::createFromRoute($this->siteName, 'bt_core.app'));
     }
     else {

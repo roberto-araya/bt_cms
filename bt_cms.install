@@ -8,11 +8,11 @@
 /**
  * Implements hook_install().
  */
- function bt_cms_install() {
-    foreach (['comment', 'content', 'content_recent', 'moderated_content'] as $view) {
-        \Drupal::entityTypeManager()->getStorage('view')
-        ->load($view)
-        ->setStatus(FALSE)
-        ->save();
-    }
- }
+function bt_cms_install() {
+  foreach (['comment', 'content', 'content_recent', 'moderated_content'] as $view) {
+    \Drupal::entityTypeManager()->getStorage('view')
+      ->load($view)
+      ->setStatus(FALSE)
+      ->save();
+  }
+}

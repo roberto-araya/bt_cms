@@ -22,7 +22,7 @@ class CustomNodeViewBuilder extends NodeViewBuilder {
    *   An array that can be processed by drupal_pre_render_links().
    */
   protected static function buildLinks(NodeInterface $entity, $view_mode) {
-    $links = array();
+    $links = [];
 
     // Always display a read more link on teasers because we have no way
     // to know when a teaser view is different than a full view.
@@ -39,26 +39,26 @@ class CustomNodeViewBuilder extends NodeViewBuilder {
 
     if (in_array($view_mode, $view_modes)) {
       $node_title_stripped = strip_tags($entity->label());
-      $links['node-readmore'] = array(
+      $links['node-readmore'] = [
         'title' => t(
-          'Read more<span class="visually-hidden"> about @title</span>', array(
+          'Read more<span class="visually-hidden"> about @title</span>', [
             '@title' => $node_title_stripped,
-          )
+          ]
         ),
         'url' => $entity->urlInfo(),
         'language' => $entity->language(),
-        'attributes' => array(
+        'attributes' => [
           'rel' => 'tag',
           'title' => $node_title_stripped,
-        ),
-      );
+        ],
+      ];
     }
 
-    return array(
+    return [
       '#theme' => 'links__node__node',
       '#links' => $links,
-      '#attributes' => array('class' => array('links', 'inline')),
-    );
+      '#attributes' => ['class' => ['links', 'inline']],
+    ];
   }
 
 }
