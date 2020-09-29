@@ -9,7 +9,7 @@ use Drupal\Core\Link;
 use Drupal\Core\Config\ConfigFactory;
 
 /**
- * Class BreadcrumbBuilder.
+ * CMS Breadcrumbs.
  *
  * @package Drupal\bt_cms\Breadcrumb
  */
@@ -98,7 +98,10 @@ class BreadcrumbBuilder implements BreadcrumbBuilderInterface {
       $breadcrumb->addLink(Link::createFromRoute('Website', 'bt_cms.website'));
     }
 
-    if (in_array($route, ['entity.node.edit_form', 'node.add', 'node.add_page'])) {
+    if (in_array(
+        $route,
+        ['entity.node.edit_form', 'node.add', 'node.add_page'])
+      ) {
       $breadcrumb->addLink(Link::createFromRoute('Content', 'bt_cms.website_content'));
       if ($route == 'node.add') {
         $breadcrumb->addLink(Link::createFromRoute('Create Content', 'node.add_page'));
