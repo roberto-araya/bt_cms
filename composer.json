@@ -20,13 +20,13 @@
     "source": "http://git.drupal.org/project/bt_cms.git"
   },
   "require": {
-    "drupal/bt_core": "^1.0-alpha2",
+    "drupal/bt_core": "^2.0.0-alpha3",
     "drupal/custom_pub": "~1.0-alpha6",
     "drupal/paragraphs": "~1.12",
     "drupal/video_embed_field": "~2.4",
     "drupal/youtube": "~1.2",
     "drupal/field_group": "~3.1",
-    "drupal/field_states_ui": "~1.0-rc4",
+    "drupal/field_states_ui": "^2.0",
     "drupal/inline_entity_form": "~1.0-rc7",
     "drupal/maxlength": "~1.0-rc1",
     "drupal/slick": "~2.2",

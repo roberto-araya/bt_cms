@@ -1,8 +1,7 @@
 name: Btester CMS
 description: ''
 type: module
-core: 8.x
-core_version_requirement: ^8
+core_version_requirement: ^9.2
 dependencies:
   - drupal:content_moderation
   - drupal:field

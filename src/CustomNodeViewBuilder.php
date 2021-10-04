@@ -45,7 +45,7 @@ class CustomNodeViewBuilder extends NodeViewBuilder {
             '@title' => $node_title_stripped,
           ]
         ),
-        'url' => $entity->urlInfo(),
+        'url' => $entity->toUrl(),
         'language' => $entity->language(),
         'attributes' => [
           'rel' => 'tag',
