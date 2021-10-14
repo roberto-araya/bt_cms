@@ -35,7 +35,7 @@ class BreadcrumbBuilder implements BreadcrumbBuilderInterface {
     'block_content.add_form',
     'bt_core.app',
     'bt_cms.website',
-    'bt_cms.website_content',
+    'system.admin_content',
     'bt_cms.website_blocks',
   ];
 
@@ -83,13 +83,6 @@ class BreadcrumbBuilder implements BreadcrumbBuilderInterface {
     $breadcrumb = new Breadcrumb();
     $breadcrumb->addCacheContexts(["url"]);
 
-    /*if ($route == 'bt_core.app') {
-    $breadcrumb->addLink(
-    Link::createFromRoute(
-    'Home', 'page_manager.page_view_ipe_home_ipe_home-panels_variant-0'
-    ));
-    }*/
-
     if ($route == 'bt_cms.website') {
       $breadcrumb->addLink(Link::createFromRoute($this->siteName, 'bt_core.app'));
     }
@@ -102,7 +95,7 @@ class BreadcrumbBuilder implements BreadcrumbBuilderInterface {
         $route,
         ['entity.node.edit_form', 'node.add', 'node.add_page'])
       ) {
-      $breadcrumb->addLink(Link::createFromRoute('Content', 'bt_cms.website_content'));
+      $breadcrumb->addLink(Link::createFromRoute('Content', 'system.admin_content'));
       if ($route == 'node.add') {
         $breadcrumb->addLink(Link::createFromRoute('Create Content', 'node.add_page'));
       }

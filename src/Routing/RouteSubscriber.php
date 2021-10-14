@@ -41,8 +41,6 @@ class RouteSubscriber extends RouteSubscriberBase {
     // Change path system.admin_content.
     if ($route = $collection->get('system.admin_content')) {
       $route->setPath('/app/website/content');
-      /* route->setDefault(
-      _controller', '\Drupal\bt_core\Controller\AppController::content');*/
     }
 
     // $collection->remove(['system.admin_content']);

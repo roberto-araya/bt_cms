@@ -11,7 +11,7 @@ use Drupal\Core\Entity\EntityTypeInterface;
  * Implements hook_menu_local_actions_alter().
  */
 function bt_cms_menu_local_actions_alter(&$local_actions) {
-  $local_actions['node.add_page']['appears_on'][0] = 'bt_cms.website_content';
+  $local_actions['node.add_page']['appears_on'][0] = 'system.admin_content';
 }
 
 /**
@@ -58,7 +58,7 @@ function bt_cms_node_links_alter(&$links, $entity, &$context) {
 function bt_cms_local_tasks_alter(&$local_tasks) {
   unset($local_tasks['comment.admin']);
   $local_tasks['system.admin_content']['base_route'] = 'bt_cms.website';
-  $local_tasks['system.admin_content']['route_name'] = 'bt_cms.website_content';
+  $local_tasks['system.admin_content']['route_name'] = 'system.admin_content';
   $local_tasks['comment.admin_new']['parent_id'] = 'system.admin_content';
   $local_tasks['comment.admin_new']['weight'] = 2;
   $local_tasks['comment.admin_approval']['parent_id'] = 'system.admin_content';

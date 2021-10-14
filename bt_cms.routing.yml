@@ -27,13 +27,3 @@ bt_cms.website_blocks:
     _admin_route: TRUE
   requirements:
     _role: 'bt_admin_blocks'
-
-bt_cms.website_content:
-  path: '/app/website/content'
-  defaults:
-    _controller: '\Drupal\bt_core\Controller\AppController::content'
-    _title: 'Content'
-  options:
-    _admin_route: TRUE
-  requirements:
-    _role: 'bt_create_content+bt_edit_publish_content'
