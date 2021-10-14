@@ -4,32 +4,8 @@ bt_cms.website_task:
   base_route: bt_cms.website
   weight: -1
 
-#bt_cms.website_panel_task:
-#  title: 'Panel'
-#  route_name: bt_cms.website
-#  parent_id: bt_cms.website_task
-#  weight: -1
-
 bt_cms.website_blocks_task:
   title: 'Blocks'
   route_name: bt_cms.website_blocks
   base_route: bt_cms.website
   weight: 1
-
-#bt_cms.website_content_task:
-#  title: 'Content'
-#  base_route: bt_cms.website
-#  weight: 1
-#  route_name: system.admin_content
-
-#bt_cms.website_content_subtask:
-#  title: 'Content'
-#  route_name: system.admin_content
-#  parent_id: bt_cms.website_content_task
-#  weight: 1
-
-#bt_cms.website_content_comments_task:
-#  title: 'Comments'
-#  route_name: comment.admin
-#  parent_id: system.admin_content
-#  weight: 1
