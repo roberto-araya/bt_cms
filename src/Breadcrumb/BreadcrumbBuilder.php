@@ -37,6 +37,7 @@ class BreadcrumbBuilder implements BreadcrumbBuilderInterface {
     'bt_cms.website',
     'system.admin_content',
     'bt_cms.website_blocks',
+    'view.bt_files.page_1',
   ];
 
   /**
