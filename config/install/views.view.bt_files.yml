@@ -1,6 +1,8 @@
 langcode: en
 status: true
 dependencies:
+  config:
+    - user.role.bt_create_content
   module:
     - file
     - user
@@ -19,9 +21,10 @@ display:
     position: 0
     display_options:
       access:
-        type: perm
+        type: role
         options:
-          perm: 'access files overview'
+          role:
+            bt_create_content: bt_create_content
       cache:
         type: tag
         options: {  }

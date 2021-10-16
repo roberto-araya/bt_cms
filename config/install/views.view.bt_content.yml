@@ -1,6 +1,8 @@
 langcode: en
 status: true
 dependencies:
+  config:
+    - user.role.bt_create_content
   module:
     - node
     - user
@@ -15,9 +17,10 @@ display:
   default:
     display_options:
       access:
-        type: perm
+        type: role
         options:
-          perm: 'access content overview'
+          role:
+            bt_create_content: bt_create_content
       cache:
         type: tag
       query:
