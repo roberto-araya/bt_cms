@@ -35,12 +35,12 @@ class RouteSubscriber extends RouteSubscriberBase {
         $route->setPath($path);
       }
 
-      if ($route_name == 'comment.admin' || 
-          $route_name == 'comment.admin_approval' || 
+      if ($route_name == 'comment.admin' ||
+          $route_name == 'comment.admin_approval' ||
           $route_name == 'content_moderation.admin_moderated_content') {
         $route->setOption('_admin_route', TRUE);
       }
-      
+
       if ($route_name == 'node.add_page') {
         $route->setDefaults([
           '_controller' => '\Drupal\bt_cms\Controller\CustomNodeController::addPage',
@@ -49,4 +49,5 @@ class RouteSubscriber extends RouteSubscriberBase {
       }
     }
   }
+
 }
