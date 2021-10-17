@@ -56,6 +56,7 @@ function bt_cms_node_links_alter(&$links, $entity, &$context) {
  * Implements hook_local_tasks_alter().
  */
 function bt_cms_local_tasks_alter(&$local_tasks) {
+  // Update task relate to content to integrate it with our navigation structure.
   unset($local_tasks['comment.admin']);
   $local_tasks['system.admin_content']['base_route'] = 'bt_cms.website';
   $local_tasks['system.admin_content']['route_name'] = 'system.admin_content';
@@ -63,4 +64,22 @@ function bt_cms_local_tasks_alter(&$local_tasks) {
   $local_tasks['comment.admin_new']['weight'] = 2;
   $local_tasks['comment.admin_approval']['parent_id'] = 'system.admin_content';
   $local_tasks['comment.admin_approval']['weight'] = 3;
+
+  // Make theme tabs name more specific.
+  $local_tasks['system.themes_page']['title'] = 'Theme List';
+  $local_tasks['system.theme_settings']['title'] = 'Theme Settings';
+  
+  // Disable default tabs of block_content.
+  unset($local_tasks['entity.block_content.collection']);
+  unset($local_tasks['block_content.list_sub']);
+  unset($local_tasks['entity.block_content_type.collection']);
+
+  // Move block.admin_display tabs to the system.themes_page tabs group.
+  $local_tasks['block.admin_display']['base_route'] = 'system.themes_page';
+  $local_tasks['block.admin_display']['weight'] = 200; 
+}
+
+function bt_cms_menu_links_discovered_alter(&$links) {
+  // Move block.admin_display menu item inside to the system.themes_page menu item.
+  $links['block.admin_display']['parent'] = 'system.themes_page';
 }

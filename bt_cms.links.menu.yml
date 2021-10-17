@@ -10,7 +10,7 @@ bt_cms.website_blocks_menu:
   title: 'Blocks'
   description: 'List all blocks'
   parent: bt_cms.website_menu
-  route_name: bt_cms.website_blocks
+  route_name: entity.block_content.collection
   weight: 2
   menu_name: bt-menu-app
 
@@ -18,7 +18,7 @@ bt_cms.website_blocks_add_menu:
   title: 'Create block'
   description: 'Create new block'
   parent: bt_cms.website_blocks_menu
-  route_name: bt_cms.add_block
+  route_name: block_content.add_page
   weight: 0
   menu_name: bt-menu-app
 
@@ -45,3 +45,20 @@ bt_cms.website_files_menu:
   route_name: view.bt_files.page_1
   weight: 1
   menu_name: bt-menu-app
+
+bt_cms.system.theme_settings:
+  title: 'Theme settings'
+  description: ''
+  parent: system.themes_page
+  route_name: system.theme_settings
+  weight: -100
+  menu_name: admin
+
+bt_cms.block_content_type.collection:
+  title: 'Block Content Types'
+  description: 'A list of custom content block types.'
+  parent: system.admin_structure
+  route_name: entity.block_content_type.collection
+  weight: -10
+  menu_name: admin
+  

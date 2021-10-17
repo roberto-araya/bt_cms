@@ -31,12 +31,12 @@ class BreadcrumbBuilder implements BreadcrumbBuilderInterface {
     'entity.node.edit_form',
     'node.add',
     'node.add_page',
-    'bt_cms.add_block',
+    'block_content.add_page',
     'block_content.add_form',
     'bt_core.app',
     'bt_cms.website',
     'system.admin_content',
-    'bt_cms.website_blocks',
+    'entity.block_content.collection',
     'view.bt_files.page_1',
   ];
 
@@ -102,13 +102,12 @@ class BreadcrumbBuilder implements BreadcrumbBuilderInterface {
       }
     }
 
-    if (in_array($route, ['bt_cms.add_block', 'block_content.add_form'])) {
-      $breadcrumb->addLink(Link::createFromRoute('Blocks', 'bt_cms.website_blocks'));
+    if (in_array($route, ['block_content.add_page', 'block_content.add_form'])) {
+      $breadcrumb->addLink(Link::createFromRoute('Blocks', 'entity.block_content.collection'));
       if ($route == 'block_content.add_form') {
-        $breadcrumb->addLink(Link::createFromRoute('Add Block', 'bt_cms.add_block'));
+        $breadcrumb->addLink(Link::createFromRoute('Add Block', 'block_content.add_page'));
       }
     }
-
     return $breadcrumb;
   }
 

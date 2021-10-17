@@ -6,6 +6,6 @@ bt_cms.website_task:
 
 bt_cms.website_blocks_task:
   title: 'Blocks'
-  route_name: bt_cms.website_blocks
+  route_name: entity.block_content.collection
   base_route: bt_cms.website
   weight: 1

@@ -18,12 +18,12 @@ bt_cms.website:
   requirements:
     _role: 'bt_add_forum_discussion+bt_moderate_comments+bt_create_content+bt_edit_publish_content+bt_build_block_pages'
 
-bt_cms.website_blocks:
-  path: '/app/website/blocks'
-  defaults:
-    _controller: '\Drupal\bt_core\Controller\AppController::content'
-    _title: 'Blocks'
-  options:
-    _admin_route: TRUE
-  requirements:
-    _role: 'bt_admin_blocks'
+#bt_cms.website_blocks:
+#  path: '/app/website/blocks'
+#  defaults:
+#    _controller: '\Drupal\bt_core\Controller\AppController::content'
+#    _title: 'Blocks'
+#  options:
+#    _admin_route: TRUE
+#  requirements:
+#    _role: 'bt_admin_blocks'

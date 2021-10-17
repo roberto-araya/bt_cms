@@ -1,7 +1,0 @@
-bt_cms.add_block_action:
-  route_name: bt_cms.add_block
-  title: 'Add block'
-  appears_on:
-    - bt_cms.website_blocks
-  class: \Drupal\block_content\Plugin\Menu\LocalAction\BlockContentAddLocalAction
-  
