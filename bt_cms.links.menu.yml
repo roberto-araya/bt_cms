@@ -55,7 +55,7 @@ bt_cms.system.theme_settings:
   menu_name: admin
 
 bt_cms.block_content_type.collection:
-  title: 'Block Content Types'
+  title: 'Block content types'
   description: 'A list of custom content block types.'
   parent: system.admin_structure
   route_name: entity.block_content_type.collection
