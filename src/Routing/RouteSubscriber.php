@@ -35,9 +35,13 @@ class RouteSubscriber extends RouteSubscriberBase {
         $route->setPath($path);
       }
 
-      if ($route_name == 'comment.admin' ||
-          $route_name == 'comment.admin_approval' ||
-          $route_name == 'content_moderation.admin_moderated_content') {
+      if (in_array($route_name, [
+        'comment.admin',
+        'content_moderation.admin_moderated_content',
+        'comment.admin_approval',
+        'entity.block_content.collection',
+        'system.admin_content',
+      ])) {
         $route->setOption('_admin_route', TRUE);
       }
 
@@ -47,6 +51,9 @@ class RouteSubscriber extends RouteSubscriberBase {
           '_title' => 'Create Content',
         ]);
       }
+    }
+    if ($route = $collection->get('view.bt_files.page_1')) {
+      $route->setOption('_admin_route', TRUE);
     }
   }
 
