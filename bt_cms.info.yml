@@ -6,7 +6,6 @@ dependencies:
   - drupal:content_moderation
   - drupal:language
   - drupal:menu_ui
-  - drupal:rdf
   - drupal:layout_builder
   - bt_core:bt_core
   - custom_pub:custom_pub
