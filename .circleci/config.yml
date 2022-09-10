@@ -69,28 +69,28 @@ workflows:
   version: 2
   main:
     jobs:
-      - build-php-8.0:
-          filters:
-            tags:
-              only: /.*/
-      - build-php-8.1:
-          filters:
-            tags:
-              only: /.*/
-      - build-php-8.0-legacy:
-          filters:
-            tags:
-              only: /.*/
-      - build-php-8.1-legacy:
-          filters:
-            tags:
-              only: /.*/
+      #- build-php-8.0:
+      #    filters:
+      #      tags:
+      #        only: /.*/
+      #- build-php-8.1:
+      #    filters:
+      #      tags:
+      #        only: /.*/
+      #- build-php-8.0-legacy:
+      #    filters:
+      #      tags:
+      #        only: /.*/
+      #- build-php-8.1-legacy:
+      #    filters:
+      #      tags:
+      #        only: /.*/
       - deploy:
-          requires:
-            - build-php-8.0
-            - build-php-8.1
-            - build-php-8.0-legacy
-            - build-php-8.1-legacy
+          #requires:
+          #  - build-php-8.0
+          #  - build-php-8.1
+          #  - build-php-8.0-legacy
+          #  - build-php-8.1-legacy
           filters:
             tags:
               only: /.*/
