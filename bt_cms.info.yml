@@ -1,5 +1,5 @@
 name: Btester CMS
-description: ''
+description: 'CMS core functionalities.'
 type: module
 core_version_requirement: ^9.2
 dependencies:
@@ -7,6 +7,7 @@ dependencies:
   - drupal:language
   - drupal:menu_ui
   - drupal:layout_builder
+  - drupal:ckeditor5
   - bt_core:bt_core
   - custom_pub:custom_pub
   - paragraphs:paragraphs
