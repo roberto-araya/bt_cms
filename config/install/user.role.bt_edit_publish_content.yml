@@ -2,9 +2,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - node.type.blog_post
-    - node.type.bt_article
-    - node.type.bt_basic_page
     - workflows.workflow.editorial
   module:
     - content_moderation
@@ -17,9 +14,6 @@ is_admin: null
 permissions:
   - 'access content overview'
   - 'access media overview'
-  - 'edit any blog_post content'
-  - 'edit any bt_article content'
-  - 'edit any bt_basic_page content'
   - 'revert all revisions'
   - 'update any media'
   - 'use archived_published transition'
