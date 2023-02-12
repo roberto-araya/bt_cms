@@ -1,10 +1,7 @@
 langcode: en
 status: true
 dependencies:
-  config:
-    - workflows.workflow.editorial
   module:
-    - content_moderation
     - media
     - node
 id: bt_edit_publish_content
@@ -18,11 +15,6 @@ permissions:
   - 'update any media'
   - 'use archived_published transition'
   - 'use draft_published transition'
-  - 'use editorial transition archive'
-  - 'use editorial transition archived_draft'
-  - 'use editorial transition archived_published'
-  - 'use editorial transition create_new_draft'
-  - 'use editorial transition publish'
   - 'use needs_review_published transition'
   - 'use published_draft transition'
   - 'use published_published transition'
