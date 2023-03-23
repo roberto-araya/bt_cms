@@ -52,9 +52,12 @@ class RouteSubscriber extends RouteSubscriberBase {
         ]);
       }
     }
-    if ($route = $collection->get('view.bt_files.page_1')) {
-      $route->setOption('_admin_route', TRUE);
-    }
+    $routes = ['view.bt_files.page_1', 'view.bt_forms_submissions.admin_page'];
+    foreach ($routes as $route_name) {
+      if ($route = $collection->get($route_name)) {
+        $route->setOption('_admin_route', TRUE);
+      }
+    }   
   }
 
 }

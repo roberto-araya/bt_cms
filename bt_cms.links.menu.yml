@@ -46,6 +46,14 @@ bt_cms.website_files_menu:
   weight: 1
   menu_name: bt-menu-app
 
+bt_cms.website_forms_submissions_menu:
+  title: 'Forms Submissions'
+  description: 'List all forms submissions'
+  parent: bt_cms.website_menu
+  route_name: view.bt_forms_submissions.admin_page
+  weight: 2
+  menu_name: bt-menu-app
+
 bt_cms.system.theme_settings:
   title: 'Theme settings'
   description: ''
