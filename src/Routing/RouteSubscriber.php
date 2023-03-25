@@ -57,7 +57,7 @@ class RouteSubscriber extends RouteSubscriberBase {
       if ($route = $collection->get($route_name)) {
         $route->setOption('_admin_route', TRUE);
       }
-    }   
+    }
   }
 
 }
