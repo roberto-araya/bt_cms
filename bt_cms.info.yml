@@ -20,4 +20,5 @@ dependencies:
   - inline_entity_form:inline_entity_form
   - maxlength:maxlength
   - slick:slick
+  - metatag:metatag
 package: Btester
