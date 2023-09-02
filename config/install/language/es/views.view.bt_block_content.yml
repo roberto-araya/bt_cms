@@ -1,0 +1,48 @@
+langcode: es
+label: 'Librería de Bloques Personalizados'
+description: 'Encuentra y gestiona bloques personalizados..'
+display:
+  default:
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Aplicar
+          reset_button_label: Resetear
+          exposed_sorts_label: 'Ordenar por'
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      pager:
+        options:
+          tags:
+            previous: '‹ Previos'
+            next: 'Siguientes ›'
+          expose:
+            items_per_page_label: 'Elementos por página'
+            items_per_page_options_all_label: '- Todo -'
+      fields:
+        info:
+          label: 'Descripción del bloque'
+        type:
+          label: 'Tipo de Bloque'
+        changed:
+          label: Actualizado
+        operations:
+          label: Operaciones
+      filters:
+        info:
+          admin_label: 'Información'
+          expose:
+            label: 'Descripción del Bloque'
+          group_info:
+        type:
+          admin_label: 'Tipo'
+          expose:
+            label: 'Tipo de Bloque'
+      title: 'Librería de Bloques Personalizados'
+      empty:
+        area_text_custom:
+          content: 'No hay bloques personalizados disponibles.'
+  collection:
+    display_options:
+      menu:
+        title: 'Librería de Bloques Personalizados'

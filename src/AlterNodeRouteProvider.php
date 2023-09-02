@@ -2,8 +2,8 @@
 
 namespace Drupal\bt_cms;
 
-use Drupal\node\Entity\NodeRouteProvider;
 use Drupal\Core\Entity\EntityTypeInterface;
+use Drupal\node\Entity\NodeRouteProvider;
 use Symfony\Component\Routing\Route;
 
 /**

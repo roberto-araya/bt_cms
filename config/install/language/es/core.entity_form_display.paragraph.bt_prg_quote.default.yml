@@ -1,0 +1,9 @@
+langcode: es
+content:
+  field_bt_paragraph:
+    third_party_settings:
+      field_states_ui:
+        form:
+          add: Agragar
+      maxlength:
+        maxlength_js_label: 'Contenido limitado a @limit carácteres, restantes: <strong>@remaining</strong>'

@@ -1,0 +1,4 @@
+langcode: es
+label: Tarjeta
+targetEntityType: node
+cache: true

@@ -1,0 +1,39 @@
+langcode: es
+label: 'Envíos de Formulario'
+display:
+  default:
+    display_options:
+      title: 'Envíos de Formulario'
+      fields:
+        webform_submission_bulk_form:
+          label: 'Operaciones Masivas'
+          action_title: 'Operaciones Masivas'
+        completed:
+          label: Envíado
+        webform_id:
+          label: Formulario
+        view_webform_submission:
+          label: 'Enlace a envíos'
+        operations:
+          label: Operaciones
+      pager:
+        options:
+          tags:
+            next: 'Siguientes ›'
+            previous: '‹ Previos'
+          expose:
+            items_per_page_label: 'Elementos por página'
+            items_per_page_options_all_label: '- Todos -'
+      exposed_form:
+        options:
+          submit_button: Aplicar
+          reset_button_label: Resetear
+          exposed_sorts_label: 'Ordenar por'
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      filters:
+        webform_id:
+          expose:
+            label: Formulario
+  admin_page:
+    display_title: Página

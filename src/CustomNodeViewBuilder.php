@@ -2,8 +2,8 @@
 
 namespace Drupal\bt_cms;
 
-use Drupal\node\NodeViewBuilder;
 use Drupal\node\NodeInterface;
+use Drupal\node\NodeViewBuilder;
 
 /**
  * View builder handler for nodes.
