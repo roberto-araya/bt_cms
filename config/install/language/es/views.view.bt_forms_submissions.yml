@@ -1,9 +1,9 @@
 langcode: es
-label: 'Envíos de Formulario'
+label: 'Envíos de Formularios'
 display:
   default:
     display_options:
-      title: 'Envíos de Formulario'
+      title: 'Envíos de Formularios'
       fields:
         webform_submission_bulk_form:
           label: 'Operaciones Masivas'
@@ -37,3 +37,6 @@ display:
             label: Formulario
   admin_page:
     display_title: Página
+    display_options:
+      menu:
+        title: 'Envíos de formulario'
