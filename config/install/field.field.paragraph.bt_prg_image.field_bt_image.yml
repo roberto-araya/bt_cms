@@ -1,0 +1,28 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_bt_image
+    - media.type.bt_image
+    - paragraphs.paragraphs_type.bt_prg_image
+id: paragraph.bt_prg_image.field_bt_image
+field_name: field_bt_image
+entity_type: paragraph
+bundle: bt_prg_image
+label: Image
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      bt_image: bt_image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference
