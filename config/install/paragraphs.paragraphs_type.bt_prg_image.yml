@@ -1,9 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-id: bt_prg_image
-label: Image
-icon_uuid: null
-icon_default: null
-description: ''
-behavior_plugins: {  }
