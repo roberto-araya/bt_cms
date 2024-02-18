@@ -20,8 +20,8 @@
     "source": "http://git.drupal.org/project/bt_cms.git"
   },
   "require": {
-    "drupal/core-recommended": "~9.4.4",
-    "drupal/bt_core": "^2.0.0-alpha3",
+    "drupal/core": "~9.4.0",
+    "drupal/bt_core": "~2.0.0",
     "drupal/custom_pub": "~1.0-alpha6",
     "drupal/paragraphs": "~1.12",
     "drupal/video_embed_field": "~2.4",
